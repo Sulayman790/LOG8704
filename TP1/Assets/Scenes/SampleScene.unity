@@ -1454,13 +1454,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CameraToFace: {fileID: 0}
   m_ObjectPrefabs:
-  - {fileID: 1331027681289655276, guid: d76fbd7835be1d94e8f9b8fc9d6ec822, type: 3}
-  - {fileID: 919132149155446097, guid: 4e86d97643548ac48a10bd4493f691d1, type: 3}
-  - {fileID: 3555902977704940904, guid: 23412048bf4821d4f8bf5c7d9c1abd5b, type: 3}
-  - {fileID: 5419581123709780336, guid: aaf6326249753074fbc1148303020f26, type: 3}
-  - {fileID: 7279467769842343898, guid: b1b37ac0eaa6a9a4785fc1f26065e8b3, type: 3}
-  - {fileID: 3745605318107395163, guid: daca7e1cd0a975941a64a8a9cbd8e5e5, type: 3}
-  - {fileID: 2668992677333385299, guid: 98cdacc32bf0d8d469092762a7263c4b, type: 3}
+  - {fileID: 8986328500875594450, guid: 204ebf91488c74c409f84c2d039f5c55, type: 3}
+  - {fileID: 8986328500875594450, guid: 803ce49e5d288a247b72c0572c8adf23, type: 3}
+  - {fileID: 8986328500875594450, guid: f72f4f96029582f46b84d6bb2fe59eff, type: 3}
+  - {fileID: 8986328500875594450, guid: 9404c611900780d4096ded7aac11e39f, type: 3}
+  - {fileID: 8986328500875594450, guid: 28c1d2c5c00048b42b56447b0ad7ee92, type: 3}
+  - {fileID: 8986328500875594450, guid: cdf5cfa68ad73b84f8ba3ebbad7ef1a0, type: 3}
+  - {fileID: 8986328500875594450, guid: de65b1756786cbf44a971f2ae2bfaa56, type: 3}
   m_SpawnVisualizationPrefab: {fileID: 0}
   m_SpawnOptionIndex: 0
   m_OnlySpawnInView: 1
@@ -5043,7 +5043,7 @@ MonoBehaviour:
   m_SerializedLibrary: {fileID: 11400000, guid: 7b05bdae76ca12d45875912d1dda8e8f,
     type: 2}
   m_MaxNumberOfMovingImages: 4
-  m_TrackedImagePrefab: {fileID: 919132149155446097, guid: 3d693a4057ea2b944adc6995e4fb3fbc,
+  m_TrackedImagePrefab: {fileID: 4561932346382148503, guid: d43fa135c997ef04dbc7a29ab29abcaa,
     type: 3}
 --- !u!1 &1309057132
 GameObject:
