@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7123396054838842414}
   - component: {fileID: 8936528283082155148}
   - component: {fileID: 1703080963024805410}
+  - component: {fileID: 4493871869242031871}
   m_Layer: 0
   m_Name: Astronaut_mesh
   m_TagString: Untagged
@@ -86,6 +87,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4493871869242031871
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7335618352304906027}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6381112142505060761, guid: 288bfc498a4e0024eb21139ba0b47e59, type: 3}
 --- !u!1001 &8374162720834587237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106,7 +129,7 @@ PrefabInstance:
     - target: {fileID: 613292779795284151, guid: ebd7292e888c84f05924605e51048072,
         type: 3}
       propertyPath: m_Name
-      value: CubeVariant 1
+      value: Astronaut
       objectReference: {fileID: 0}
     - target: {fileID: 613292779795284151, guid: ebd7292e888c84f05924605e51048072,
         type: 3}
