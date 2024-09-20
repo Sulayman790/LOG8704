@@ -1,0 +1,2 @@
+C:\Users\pc\Desktop\Cours Polymtl\Session 7\LOG8704\LOG8704\TP1\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\pc\Desktop\Cours Polymtl\Session 7\LOG8704\LOG8704\TP1\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
