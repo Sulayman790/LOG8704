@@ -73,6 +73,7 @@ crashlytics-build.properties
 
 # Directories
 *.idea/
+tp1_ios/
 
 # Files
 *.DS_Store
