@@ -332,6 +332,7 @@ public class ARTemplateMenuManager : MonoBehaviour
     {
         m_ShowObjectMenu = true;
         m_ObjectMenu.SetActive(true);
+        m_ObjectMenuAnimator.gameObject.SetActive(true);
         if (!m_ObjectMenuAnimator.GetBool("Show"))
         {
             m_ObjectMenuAnimator.SetBool("Show", true);
