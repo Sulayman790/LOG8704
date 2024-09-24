@@ -190,7 +190,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Renderer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7165606382938412866}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3435864238947048048, guid: ebd7292e888c84f05924605e51048072, type: 3}
