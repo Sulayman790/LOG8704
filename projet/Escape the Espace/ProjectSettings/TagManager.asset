@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - TrackingObject
+  - SkyboxCamera
+  - Meteor
+  - Actors
+  - Right Hand
+  - Left Hand
   layers:
   - Default
   - TransparentFX
