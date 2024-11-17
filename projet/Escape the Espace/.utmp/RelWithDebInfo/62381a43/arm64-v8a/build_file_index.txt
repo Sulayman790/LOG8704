@@ -1,0 +1,2 @@
+/Users/rufuslevi/Developer/log8704/projet/Escape the Espace/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/Users/rufuslevi/Developer/log8704/projet/Escape the Espace/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt
