@@ -53,6 +53,7 @@ Shader "Custom/ShowInsideWithCubemapURP"
 
                 // Rotate with the object using its matrix
                 float3 rotatedDir = mul((float3x3)unity_WorldToObject, viewDir);
+                rotatedDir.x = -rotatedDir.x;
 
                 // Sample from the cubemap
                 half4 texColor = SAMPLE_TEXTURECUBE(_Cubemap, sampler_Cubemap, rotatedDir);
