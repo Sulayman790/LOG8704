@@ -11,6 +11,8 @@ TagManager:
   - Actors
   - Right Hand
   - Left Hand
+  - pan
+  - crystal
   layers:
   - Default
   - TransparentFX
