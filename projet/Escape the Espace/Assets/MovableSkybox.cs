@@ -10,7 +10,7 @@ public class MovableSkybox : MonoBehaviour
 
     void Start()
     {
-        rotationSpeed /= 4;
+        rotationSpeed /= 2;
     }
 
     void Update()
