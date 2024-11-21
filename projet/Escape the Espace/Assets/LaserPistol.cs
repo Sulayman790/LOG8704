@@ -11,8 +11,8 @@ public class LaserPistol : MonoBehaviour
     void Start()
     {
         UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
-        grabInteractable.activated.AddListener(OnActivated);
-        grabInteractable.deactivated.AddListener(OnDeactivated);
+        grabInteractable.activated.AddListener(x => Shoot());
+        grabInteractable.deactivated.AddListener(x => StopShooting());
     }
 
     private void OnActivated(ActivateEventArgs args)
