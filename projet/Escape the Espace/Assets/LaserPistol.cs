@@ -7,6 +7,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class LaserPistol : MonoBehaviour
 {
     public GameObject Laser;
+    public float drawingPlaneDistance;
+
     private LineRenderer lineRenderer;
     private List<Vector3> drawPoints = new List<Vector3>();
     private bool isDrawing = false;
@@ -75,7 +77,7 @@ public class LaserPistol : MonoBehaviour
 
     private void UpdateDrawingPlane()
     {
-        Vector3 planePosition = transform.position + transform.forward * 2f;
+        Vector3 planePosition = transform.position + transform.forward * drawingPlaneDistance;
         drawingPlane.transform.position = planePosition;
         drawingPlane.transform.LookAt(transform.position);
         drawingPlane.transform.Rotate(90, 0, 0);
@@ -121,15 +123,5 @@ public class LaserPistol : MonoBehaviour
         Laser.SetActive(false);
         lineRenderer.enabled = false;
         drawingPlane.GetComponent<Collider>().enabled = false;
-    }
-
-    private void OnActivated(ActivateEventArgs args)
-    {
-        Shoot();
-    }
-
-    private void OnDeactivated(DeactivateEventArgs args)
-    {
-        StopShooting();
     }
 }
