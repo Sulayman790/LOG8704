@@ -1,76 +1,53 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SphereVisibilityDetector : MonoBehaviour
 {
-    public GameObject fryingPan;
     private Camera mainCamera;
-    private Renderer sphereRenderer;
+    public float focusZoneSize = 0.2f;
     private bool isVisible = false;
+    public UnityEvent StarFound;
 
     void Start()
     {
         mainCamera = Camera.main;
-        sphereRenderer = GetComponent<Renderer>();
-
-        // Make sure fryingPan starts invisible
-        if (fryingPan != null)
-        {
-            fryingPan.SetActive(false);
-        }
     }
 
     void Update()
     {
-        CheckVisibility();
-    }
-
-    void CheckVisibility()
-    {
         // Method 1: Check if object is within camera's view frustum
         Vector3 viewportPoint = mainCamera.WorldToViewportPoint(transform.position);
-        bool inCameraView = viewportPoint.x >= 0 && viewportPoint.x <= 1 &&
-                           viewportPoint.y >= 0 && viewportPoint.y <= 1 &&
-                           viewportPoint.z > 0;
+        bool inFocusZone = IsInFocusZone(viewportPoint);
 
         // Method 2: Check if there are no obstacles between camera and sphere
-        if (inCameraView)
+        if (inFocusZone)
         {
             Vector3 directionToCamera = mainCamera.transform.position - transform.position;
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, directionToCamera, out hit))
+            if (Physics.Raycast(mainCamera.transform.position, -directionToCamera.normalized, out hit))
             {
-                if (hit.collider.CompareTag("MainCamera"))
+                if (hit.collider.gameObject == gameObject)
                 {
                     if (!isVisible)
                     {
-                        OnBecameVisible();
+                        isVisible = true;
+                        StarFound.Invoke();
                     }
-                    isVisible = true;
-                    return;
                 }
             }
         }
-
-        if (isVisible)
-        {
-            OnBecameInvisible();
-        }
-        isVisible = false;
     }
-
-    // Rest of the code stays the same
-    void OnBecameVisible()
+    private bool IsInFocusZone(Vector3 viewportPoint)
     {
-        if (fryingPan != null)
-        {
-            fryingPan.SetActive(true);
-            Debug.Log("Sphere is visible and fryingPan should appear");
-        }
-    }
+        // Ensure the object is within the screen bounds and near the center
+        float centerX = 0.5f; // Middle of the screen in the X-axis
+        float centerY = 0.5f; // Middle of the screen in the Y-axis
+        float halfFocusZone = focusZoneSize / 2f;
 
-    void OnBecameInvisible()
-    {
-        Debug.Log("Sphere is no longer visible to player");
+        return viewportPoint.x >= (centerX - halfFocusZone) &&
+               viewportPoint.x <= (centerX + halfFocusZone) &&
+               viewportPoint.y >= (centerY - halfFocusZone) &&
+               viewportPoint.y <= (centerY + halfFocusZone) &&
+               viewportPoint.z > 0; // Object must still be in front of the camera
     }
-
 }
