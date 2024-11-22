@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 28619259}
   - component: {fileID: 28619258}
   m_Layer: 0
-  m_Name: Sphere (11)
+  m_Name: Grande ourse 3
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -907,7 +907,7 @@ GameObject:
   - component: {fileID: 194399876}
   - component: {fileID: 194399875}
   m_Layer: 0
-  m_Name: Sphere (18)
+  m_Name: Petite Ourse 4
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1141,8 +1141,8 @@ Transform:
   m_GameObject: {fileID: 228471661}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.013, z: 3000.05}
-  m_LocalScale: {x: 0.01, y: 3000, z: 0.01}
+  m_LocalPosition: {x: 0, y: 0.013, z: 1600.03}
+  m_LocalScale: {x: 0.008, y: 1600, z: 0.008}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 775353331}
@@ -2008,7 +2008,7 @@ GameObject:
   - component: {fileID: 341357236}
   - component: {fileID: 341357235}
   m_Layer: 0
-  m_Name: Sphere (17)
+  m_Name: Petite Ourse 3
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2121,7 +2121,7 @@ GameObject:
   - component: {fileID: 396780177}
   - component: {fileID: 396780176}
   m_Layer: 0
-  m_Name: Sphere (19)
+  m_Name: Petite Ourse 5
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2506,7 +2506,7 @@ GameObject:
   - component: {fileID: 471205211}
   - component: {fileID: 471205210}
   m_Layer: 0
-  m_Name: Sphere (2)
+  m_Name: Orion 2
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2614,7 +2614,7 @@ GameObject:
   - component: {fileID: 477800293}
   - component: {fileID: 477800292}
   m_Layer: 0
-  m_Name: Sphere (3)
+  m_Name: Orion 3
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2719,15 +2719,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2846ae6068f67d84d857119a2b63e90f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.01
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2846ae6068f67d84d857119a2b63e90f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.01
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2846ae6068f67d84d857119a2b63e90f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.01
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2846ae6068f67d84d857119a2b63e90f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2815,7 +2815,7 @@ GameObject:
   - component: {fileID: 482103026}
   - component: {fileID: 482103025}
   m_Layer: 0
-  m_Name: Sphere (20)
+  m_Name: Petite Ourse 6
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2923,7 +2923,7 @@ GameObject:
   - component: {fileID: 494716227}
   - component: {fileID: 494716226}
   m_Layer: 0
-  m_Name: Sphere (21)
+  m_Name: Cassiopee 1
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3326,7 +3326,7 @@ GameObject:
   - component: {fileID: 641512536}
   - component: {fileID: 641512535}
   m_Layer: 0
-  m_Name: Sphere (9)
+  m_Name: Grande ourse 7
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3431,15 +3431,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2846ae6068f67d84d857119a2b63e90f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.01
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2846ae6068f67d84d857119a2b63e90f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.01
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2846ae6068f67d84d857119a2b63e90f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.01
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2846ae6068f67d84d857119a2b63e90f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3527,7 +3527,7 @@ GameObject:
   - component: {fileID: 650045223}
   - component: {fileID: 650045222}
   m_Layer: 0
-  m_Name: Sphere (8)
+  m_Name: Grande ourse 6
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3844,7 +3844,7 @@ GameObject:
   - component: {fileID: 739822442}
   - component: {fileID: 739822441}
   m_Layer: 0
-  m_Name: Sphere (24)
+  m_Name: Cassiopee 4
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4127,6 +4127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Laser: {fileID: 228471661}
+  drawingPlaneDistance: 13
 --- !u!1001 &791287364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4553,15 +4554,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2846ae6068f67d84d857119a2b63e90f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.01
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2846ae6068f67d84d857119a2b63e90f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.01
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2846ae6068f67d84d857119a2b63e90f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.01
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2846ae6068f67d84d857119a2b63e90f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4808,7 +4809,7 @@ GameObject:
   - component: {fileID: 936733092}
   - component: {fileID: 936733091}
   m_Layer: 0
-  m_Name: Sphere (13)
+  m_Name: Grande ourse 5
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4969,7 +4970,7 @@ GameObject:
   - component: {fileID: 939986299}
   - component: {fileID: 939986298}
   m_Layer: 0
-  m_Name: Sphere (6)
+  m_Name: Orion 6
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5150,7 +5151,7 @@ GameObject:
   - component: {fileID: 1000028212}
   - component: {fileID: 1000028211}
   m_Layer: 0
-  m_Name: Sphere (25)
+  m_Name: Cassiopee 5
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5831,7 +5832,7 @@ GameObject:
   - component: {fileID: 1122577391}
   - component: {fileID: 1122577390}
   m_Layer: 0
-  m_Name: Sphere (12)
+  m_Name: Grande ourse 4
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6203,7 +6204,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.309017, y: 0, z: 0, w: 0.95105654}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3600, y: 3600, z: 3600}
+  m_LocalScale: {x: 3000, y: 3000, z: 3000}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1389472620}
@@ -6736,7 +6737,7 @@ GameObject:
   - component: {fileID: 1281753828}
   - component: {fileID: 1281753827}
   m_Layer: 0
-  m_Name: Sphere (7)
+  m_Name: Grande ourse 1
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6844,7 +6845,7 @@ GameObject:
   - component: {fileID: 1316745269}
   - component: {fileID: 1316745268}
   m_Layer: 0
-  m_Name: Sphere (15)
+  m_Name: Petite Ourse 1
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7036,7 +7037,7 @@ GameObject:
   - component: {fileID: 1331754369}
   - component: {fileID: 1331754368}
   m_Layer: 0
-  m_Name: Sphere (23)
+  m_Name: Cassiopee 3
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7144,7 +7145,7 @@ GameObject:
   - component: {fileID: 1348661552}
   - component: {fileID: 1348661551}
   m_Layer: 0
-  m_Name: Sphere (10)
+  m_Name: Grande ourse 2
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7354,7 +7355,7 @@ GameObject:
   - component: {fileID: 1366459015}
   - component: {fileID: 1366459014}
   m_Layer: 0
-  m_Name: Sphere (5)
+  m_Name: Orion 5
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7983,7 +7984,7 @@ GameObject:
   - component: {fileID: 1389472621}
   - component: {fileID: 1389472624}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Betelgeuse
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8328,7 +8329,7 @@ GameObject:
   - component: {fileID: 1496695551}
   - component: {fileID: 1496695550}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: Orion 1
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9233,7 +9234,7 @@ GameObject:
   - component: {fileID: 1785548262}
   - component: {fileID: 1785548261}
   m_Layer: 0
-  m_Name: Sphere (16)
+  m_Name: Petite Ourse 2
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9955,7 +9956,7 @@ GameObject:
   - component: {fileID: 1998609725}
   - component: {fileID: 1998609724}
   m_Layer: 0
-  m_Name: Sphere (14)
+  m_Name: "\xC9toile polaire"
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10670,7 +10671,7 @@ GameObject:
   - component: {fileID: 2110946255}
   - component: {fileID: 2110946254}
   m_Layer: 0
-  m_Name: Sphere (4)
+  m_Name: Orion 4
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10920,7 +10921,7 @@ GameObject:
   - component: {fileID: 2143563836}
   - component: {fileID: 2143563835}
   m_Layer: 0
-  m_Name: Sphere (22)
+  m_Name: Cassiopee 2
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
