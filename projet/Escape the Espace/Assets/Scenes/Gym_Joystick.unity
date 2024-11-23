@@ -131,8 +131,8 @@ GameObject:
   - component: {fileID: 28619260}
   - component: {fileID: 28619259}
   - component: {fileID: 28619258}
-  m_Layer: 0
-  m_Name: Grande ourse 3
+  m_Layer: 6
+  m_Name: 3
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,12 +146,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28619256}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0661, y: 0.4113, z: -0.271}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.06610001, y: 0.41130003, z: -0.27100003}
   m_LocalScale: {x: 0.006, y: 0.006, z: 0.006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1016126588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &28619258
 SphereCollider:
@@ -906,8 +906,8 @@ GameObject:
   - component: {fileID: 194399877}
   - component: {fileID: 194399876}
   - component: {fileID: 194399875}
-  m_Layer: 0
-  m_Name: Petite Ourse 4
+  m_Layer: 6
+  m_Name: 4
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -921,12 +921,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194399873}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1107, y: 0.4727, z: -0.0517}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.110700004, y: 0.47270006, z: -0.051700015}
+  m_LocalScale: {x: 0.005, y: 0.0049999994, z: 0.0049999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1092714224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &194399875
 SphereCollider:
@@ -2035,8 +2035,8 @@ GameObject:
   - component: {fileID: 341357237}
   - component: {fileID: 341357236}
   - component: {fileID: 341357235}
-  m_Layer: 0
-  m_Name: Petite Ourse 3
+  m_Layer: 6
+  m_Name: 3
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2050,12 +2050,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341357233}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0853, y: 0.4826, z: -0.0581}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.085300006, y: 0.4826001, z: -0.0581}
+  m_LocalScale: {x: 0.005, y: 0.0049999994, z: 0.0049999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1092714224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &341357235
 SphereCollider:
@@ -2148,8 +2148,8 @@ GameObject:
   - component: {fileID: 396780178}
   - component: {fileID: 396780177}
   - component: {fileID: 396780176}
-  m_Layer: 0
-  m_Name: Petite Ourse 5
+  m_Layer: 6
+  m_Name: 5
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2163,12 +2163,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396780174}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1189, y: 0.4727, z: -0.0998}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.1189, y: 0.47270003, z: -0.09980001}
+  m_LocalScale: {x: 0.005, y: 0.0049999994, z: 0.0049999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1092714224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &396780176
 SphereCollider:
@@ -2533,8 +2533,8 @@ GameObject:
   - component: {fileID: 471205212}
   - component: {fileID: 471205211}
   - component: {fileID: 471205210}
-  m_Layer: 0
-  m_Name: Orion 2
+  m_Layer: 6
+  m_Name: 2
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2548,12 +2548,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471205208}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.497, y: -0.0035, z: -0.0605}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.49674, y: 0.00341, z: -0.0605}
+  m_LocalScale: {x: 0.01, y: 0.009999999, z: 0.009999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1526786451}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &471205210
 SphereCollider:
@@ -2641,8 +2641,8 @@ GameObject:
   - component: {fileID: 477800294}
   - component: {fileID: 477800293}
   - component: {fileID: 477800292}
-  m_Layer: 0
-  m_Name: Orion 3
+  m_Layer: 6
+  m_Name: 3
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2656,12 +2656,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477800290}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.497, y: -0.0131, z: -0.051}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.497, y: -0.013100001, z: -0.051000003}
+  m_LocalScale: {x: 0.01, y: 0.009999999, z: 0.009999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1526786451}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &477800292
 SphereCollider:
@@ -2842,8 +2842,8 @@ GameObject:
   - component: {fileID: 482103027}
   - component: {fileID: 482103026}
   - component: {fileID: 482103025}
-  m_Layer: 0
-  m_Name: Petite Ourse 6
+  m_Layer: 6
+  m_Name: 6
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2857,12 +2857,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482103023}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0911, y: 0.4727, z: -0.0989}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0911, y: 0.47270003, z: -0.09889997}
+  m_LocalScale: {x: 0.005, y: 0.0049999994, z: 0.0049999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1092714224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &482103025
 SphereCollider:
@@ -2950,8 +2950,8 @@ GameObject:
   - component: {fileID: 494716228}
   - component: {fileID: 494716227}
   - component: {fileID: 494716226}
-  m_Layer: 0
-  m_Name: Cassiopee 1
+  m_Layer: 6
+  m_Name: 1
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2965,12 +2965,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494716224}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.101, y: 0.4284, z: 0.1877}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.10100001, y: 0.4284, z: 0.18770006}
+  m_LocalScale: {x: 0.005, y: 0.0049999994, z: 0.0049999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 2042756756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &494716226
 SphereCollider:
@@ -3353,8 +3353,8 @@ GameObject:
   - component: {fileID: 641512537}
   - component: {fileID: 641512536}
   - component: {fileID: 641512535}
-  m_Layer: 0
-  m_Name: Grande ourse 7
+  m_Layer: 6
+  m_Name: 7
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3368,12 +3368,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641512533}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0592, y: 0.4361, z: -0.2299}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.059200007, y: 0.4361001, z: -0.22990005}
+  m_LocalScale: {x: 0.01, y: 0.009999999, z: 0.009999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1016126588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &641512535
 SphereCollider:
@@ -3677,8 +3677,8 @@ GameObject:
   - component: {fileID: 650045224}
   - component: {fileID: 650045223}
   - component: {fileID: 650045222}
-  m_Layer: 0
-  m_Name: Grande ourse 6
+  m_Layer: 6
+  m_Name: 6
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3692,12 +3692,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650045220}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0683, y: 0.4155, z: -0.2654}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.06830001, y: 0.41550007, z: -0.26540002}
+  m_LocalScale: {x: 0.01, y: 0.009999999, z: 0.009999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1016126588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &650045222
 SphereCollider:
@@ -3994,8 +3994,8 @@ GameObject:
   - component: {fileID: 739822443}
   - component: {fileID: 739822442}
   - component: {fileID: 739822441}
-  m_Layer: 0
-  m_Name: Cassiopee 4
+  m_Layer: 6
+  m_Name: 4
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4009,12 +4009,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739822439}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0478, y: 0.4066, z: 0.2671}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0478, y: 0.40660006, z: 0.26710004}
+  m_LocalScale: {x: 0.005, y: 0.0049999994, z: 0.0049999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 2042756756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &739822441
 SphereCollider:
@@ -4279,6 +4279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Laser: {fileID: 228471661}
   drawingPlaneDistance: 13
+  drawPoints: []
 --- !u!1001 &791287364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4959,8 +4960,8 @@ GameObject:
   - component: {fileID: 936733093}
   - component: {fileID: 936733092}
   - component: {fileID: 936733091}
-  m_Layer: 0
-  m_Name: Grande ourse 5
+  m_Layer: 6
+  m_Name: 5
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4974,12 +4975,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936733089}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1475, y: 0.3756, z: -0.2891}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.14750001, y: 0.37560004, z: -0.28910002}
   m_LocalScale: {x: 0.006, y: 0.006, z: 0.006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1016126588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &936733091
 SphereCollider:
@@ -5121,8 +5122,8 @@ GameObject:
   - component: {fileID: 939986300}
   - component: {fileID: 939986299}
   - component: {fileID: 939986298}
-  m_Layer: 0
-  m_Name: Orion 6
+  m_Layer: 6
+  m_Name: 6
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5136,12 +5137,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939986296}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.483, y: -0.0759, z: -0.0962}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.483, y: -0.0759, z: -0.09619999}
+  m_LocalScale: {x: 0.01, y: 0.009999999, z: 0.009999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1526786451}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &939986298
 SphereCollider:
@@ -5302,8 +5303,8 @@ GameObject:
   - component: {fileID: 1000028213}
   - component: {fileID: 1000028212}
   - component: {fileID: 1000028211}
-  m_Layer: 0
-  m_Name: Cassiopee 5
+  m_Layer: 6
+  m_Name: 5
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5317,12 +5318,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000028209}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0105, y: 0.4227, z: 0.2533}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0105, y: 0.42270002, z: 0.25330007}
+  m_LocalScale: {x: 0.005, y: 0.0049999994, z: 0.0049999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 2042756756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1000028211
 SphereCollider:
@@ -5398,6 +5399,73 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000028209}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1016126587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1016126588}
+  - component: {fileID: 1016126589}
+  m_Layer: 0
+  m_Name: Grande Ourse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1016126588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016126587}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1281753826}
+  - {fileID: 1348661550}
+  - {fileID: 28619257}
+  - {fileID: 1122577389}
+  - {fileID: 936733090}
+  - {fileID: 650045221}
+  - {fileID: 641512534}
+  m_Father: {fileID: 1164541442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1016126589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016126587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81b6a8da7c0b4645a3f37b6a32ad5ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomConstellation: 
+  links:
+  - StarA: 5
+    StarB: 4
+  - StarA: 4
+    StarB: 3
+  - StarA: 3
+    StarB: 2
+  - StarA: 2
+    StarB: 1
+  - StarA: 1
+    StarB: 6
+  - StarA: 6
+    StarB: 7
+  - StarA: 7
+    StarB: 2
 --- !u!4 &1027631954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 460470, guid: d78f2ba16003e6e4681b4702d6dcb72e, type: 3}
@@ -5853,6 +5921,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHandModel: {fileID: 1733923451}
   rightHandModel: {fileID: 1980409732}
+--- !u!1 &1092714223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1092714224}
+  - component: {fileID: 1092714225}
+  m_Layer: 0
+  m_Name: Petite Ourse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1092714224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092714223}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1316745267}
+  - {fileID: 1785548260}
+  - {fileID: 341357234}
+  - {fileID: 194399874}
+  - {fileID: 396780175}
+  - {fileID: 482103024}
+  m_Father: {fileID: 1164541442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1092714225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092714223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81b6a8da7c0b4645a3f37b6a32ad5ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomConstellation: Petite Ourse
+  links:
+  - StarA: 1
+    StarB: 2
+  - StarA: 2
+    StarB: 3
+  - StarA: 3
+    StarB: 4
+  - StarA: 4
+    StarB: 5
+  - StarA: 5
+    StarB: 6
+  - StarA: 6
+    StarB: 3
 --- !u!1 &1107984195
 GameObject:
   m_ObjectHideFlags: 0
@@ -5983,8 +6115,8 @@ GameObject:
   - component: {fileID: 1122577392}
   - component: {fileID: 1122577391}
   - component: {fileID: 1122577390}
-  m_Layer: 0
-  m_Name: Grande ourse 4
+  m_Layer: 6
+  m_Name: 4
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5998,12 +6130,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122577388}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1031, y: 0.4038, z: -0.2639}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.10310002, y: 0.40380004, z: -0.2639}
   m_LocalScale: {x: 0.006, y: 0.006, z: 0.006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1016126588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1122577390
 SphereCollider:
@@ -6360,31 +6492,11 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1389472620}
-  - {fileID: 1496695549}
-  - {fileID: 471205209}
-  - {fileID: 477800291}
-  - {fileID: 2110946253}
-  - {fileID: 1366459013}
-  - {fileID: 939986297}
-  - {fileID: 1281753826}
-  - {fileID: 1348661550}
-  - {fileID: 28619257}
-  - {fileID: 1122577389}
-  - {fileID: 936733090}
-  - {fileID: 650045221}
-  - {fileID: 641512534}
   - {fileID: 1998609723}
-  - {fileID: 1316745267}
-  - {fileID: 494716225}
-  - {fileID: 2143563834}
-  - {fileID: 1331754367}
-  - {fileID: 739822440}
-  - {fileID: 1000028210}
-  - {fileID: 1785548260}
-  - {fileID: 341357234}
-  - {fileID: 194399874}
-  - {fileID: 396780175}
-  - {fileID: 482103024}
+  - {fileID: 1526786451}
+  - {fileID: 1016126588}
+  - {fileID: 2042756756}
+  - {fileID: 1092714224}
   m_Father: {fileID: 1107984196}
   m_LocalEulerAnglesHint: {x: 36, y: 0, z: 0}
 --- !u!114 &1164541443
@@ -6888,8 +7000,8 @@ GameObject:
   - component: {fileID: 1281753829}
   - component: {fileID: 1281753828}
   - component: {fileID: 1281753827}
-  m_Layer: 0
-  m_Name: Grande ourse 1
+  m_Layer: 6
+  m_Name: 1
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6903,12 +7015,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281753825}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.009, y: 0.3985, z: -0.2931}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.009, y: 0.39850003, z: -0.29310003}
   m_LocalScale: {x: 0.006, y: 0.006, z: 0.006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1016126588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1281753827
 SphereCollider:
@@ -6996,8 +7108,8 @@ GameObject:
   - component: {fileID: 1316745270}
   - component: {fileID: 1316745269}
   - component: {fileID: 1316745268}
-  m_Layer: 0
-  m_Name: Petite Ourse 1
+  m_Layer: 6
+  m_Name: 1
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7011,12 +7123,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316745266}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0297, y: 0.494, z: -0.0018}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.029700002, y: 0.49400005, z: -0.001799988}
+  m_LocalScale: {x: 0.005, y: 0.0049999994, z: 0.0049999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1092714224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1316745268
 SphereCollider:
@@ -7188,8 +7300,8 @@ GameObject:
   - component: {fileID: 1331754370}
   - component: {fileID: 1331754369}
   - component: {fileID: 1331754368}
-  m_Layer: 0
-  m_Name: Cassiopee 3
+  m_Layer: 6
+  m_Name: 3
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7203,12 +7315,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331754366}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0599, y: 0.4291, z: 0.2347}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.059899997, y: 0.4291001, z: 0.23470001}
+  m_LocalScale: {x: 0.005, y: 0.0049999994, z: 0.0049999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 2042756756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1331754368
 SphereCollider:
@@ -7298,8 +7410,8 @@ GameObject:
   - component: {fileID: 1348661551}
   - component: {fileID: 1348661555}
   - component: {fileID: 1348661554}
-  m_Layer: 0
-  m_Name: Grande ourse 2
+  m_Layer: 6
+  m_Name: 2
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7313,12 +7425,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348661549}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0175, y: 0.4173, z: -0.2701}
   m_LocalScale: {x: 0.006, y: 0.006, z: 0.006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1016126588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1348661551
 SphereCollider:
@@ -7566,8 +7678,8 @@ GameObject:
   - component: {fileID: 1366459016}
   - component: {fileID: 1366459015}
   - component: {fileID: 1366459014}
-  m_Layer: 0
-  m_Name: Orion 5
+  m_Layer: 6
+  m_Name: 5
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7581,12 +7693,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366459012}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4899, y: -0.088, z: -0.0253}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.4899, y: -0.08800001, z: -0.0253}
+  m_LocalScale: {x: 0.01, y: 0.009999999, z: 0.009999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1526786451}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1366459014
 SphereCollider:
@@ -8525,8 +8637,8 @@ GameObject:
   - component: {fileID: 1496695552}
   - component: {fileID: 1496695551}
   - component: {fileID: 1496695550}
-  m_Layer: 0
-  m_Name: Orion 1
+  m_Layer: 6
+  m_Name: 1
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8540,12 +8652,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496695548}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.49, y: 0.0521, z: -0.0744}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.48949, y: 0.05951, z: -0.074400015}
+  m_LocalScale: {x: 0.01, y: 0.009999999, z: 0.009999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1526786451}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1496695550
 SphereCollider:
@@ -8626,6 +8738,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7, type: 3}
   m_PrefabInstance: {fileID: 229564500}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1526786450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1526786451}
+  - component: {fileID: 1526786452}
+  m_Layer: 0
+  m_Name: Orion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1526786451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526786450}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1496695549}
+  - {fileID: 471205209}
+  - {fileID: 477800291}
+  - {fileID: 2110946253}
+  - {fileID: 1366459013}
+  - {fileID: 939986297}
+  m_Father: {fileID: 1164541442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1526786452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526786450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81b6a8da7c0b4645a3f37b6a32ad5ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomConstellation: 
+  links:
+  - StarA: 1
+    StarB: 2
+  - StarA: 2
+    StarB: 3
+  - StarA: 3
+    StarB: 4
+  - StarA: 4
+    StarB: 5
+  - StarA: 5
+    StarB: 6
+  - StarA: 6
+    StarB: 2
 --- !u!1001 &1581507187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9430,8 +9606,8 @@ GameObject:
   - component: {fileID: 1785548263}
   - component: {fileID: 1785548262}
   - component: {fileID: 1785548261}
-  m_Layer: 0
-  m_Name: Petite Ourse 2
+  m_Layer: 6
+  m_Name: 2
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9445,12 +9621,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785548259}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0652, y: 0.4826, z: -0.0217}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.06520001, y: 0.48260006, z: -0.021699993}
+  m_LocalScale: {x: 0.005, y: 0.0049999994, z: 0.0049999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1092714224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1785548261
 SphereCollider:
@@ -10762,6 +10938,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHandModel: {fileID: 1733923451}
   rightHandModel: {fileID: 1980409732}
+--- !u!1 &2042756755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2042756756}
+  - component: {fileID: 2042756757}
+  m_Layer: 0
+  m_Name: Cassiopee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2042756756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042756755}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 494716225}
+  - {fileID: 2143563834}
+  - {fileID: 1331754367}
+  - {fileID: 739822440}
+  - {fileID: 1000028210}
+  m_Father: {fileID: 1164541442}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2042756757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042756755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81b6a8da7c0b4645a3f37b6a32ad5ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomConstellation: Cassiopee
+  links:
+  - StarA: 1
+    StarB: 2
+  - StarA: 2
+    StarB: 3
+  - StarA: 3
+    StarB: 4
+  - StarA: 4
+    StarB: 5
 --- !u!1001 &2044477853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10951,8 +11186,8 @@ GameObject:
   - component: {fileID: 2110946256}
   - component: {fileID: 2110946255}
   - component: {fileID: 2110946254}
-  m_Layer: 0
-  m_Name: Orion 4
+  m_Layer: 6
+  m_Name: 4
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10966,12 +11201,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110946252}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.497, y: -0.0189, z: -0.0415}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.49797, y: -0.0189, z: -0.0255}
+  m_LocalScale: {x: 0.01, y: 0.009999999, z: 0.009999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 1526786451}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &2110946254
 SphereCollider:
@@ -11213,8 +11448,8 @@ GameObject:
   - component: {fileID: 2143563837}
   - component: {fileID: 2143563836}
   - component: {fileID: 2143563835}
-  m_Layer: 0
-  m_Name: Cassiopee 2
+  m_Layer: 6
+  m_Name: 2
   m_TagString: star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11228,12 +11463,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143563833}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0915, y: 0.4291, z: 0.2295}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.09150001, y: 0.42910004, z: 0.22950006}
+  m_LocalScale: {x: 0.005, y: 0.0049999994, z: 0.0049999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1164541442}
+  m_Father: {fileID: 2042756756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &2143563835
 SphereCollider:
