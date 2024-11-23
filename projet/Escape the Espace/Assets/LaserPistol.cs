@@ -8,12 +8,15 @@ using System;
 public class LaserPistol : MonoBehaviour
 {
     public GameObject Laser;
+    public Material indicatorMaterial;
     public float drawingPlaneDistance;
 
-    private LineRenderer lineRenderer;
-    public List<Vector3> drawPoints = new List<Vector3>();
-    private bool isDrawing = false;
+    private GameObject pointIndicator;
     private GameObject drawingPlane;
+    private LineRenderer lineRenderer;
+    public List<Vector3> drawPoints = new List<Vector3>() { Vector3.zero };
+    private bool isDrawing = false;
+
     private Constellation currentConstellation = null;
     private List<Link> starLinks = new List<Link>();
     private int lastStarNumber = -1;
@@ -22,6 +25,7 @@ public class LaserPistol : MonoBehaviour
     {
         SetupLineRenderer();
         CreateDrawingPlane();
+        CreateSphere();
         SetupInteractions();
     }
 
@@ -38,9 +42,9 @@ public class LaserPistol : MonoBehaviour
             lineRenderer = gameObject.AddComponent<LineRenderer>();
 
         // Configure LineRenderer
-        lineRenderer.startWidth = 0.01f;
-        lineRenderer.endWidth = 0.01f;
-        lineRenderer.positionCount = 2;
+        lineRenderer.startWidth = 1.5f; // 0.15f;
+        lineRenderer.endWidth = 1.5f; // 0.15f;
+        lineRenderer.positionCount = 1;
         lineRenderer.enabled = false;
 
         // Create and set material
@@ -66,10 +70,20 @@ public class LaserPistol : MonoBehaviour
     private void CreateDrawingPlane()
     {
         drawingPlane = GameObject.CreatePrimitive(PrimitiveType.Plane);
-        drawingPlane.layer = LayerMask.NameToLayer("MovableSkybox");
+        drawingPlane.name = "Drawing Plane";
+        drawingPlane.layer = LayerMask.NameToLayer("DrawingSkybox");
         drawingPlane.GetComponent<MeshRenderer>().enabled = false;
         drawingPlane.GetComponent<Collider>().enabled = false;
         drawingPlane.transform.localScale = new Vector3(0.3f, 1f, 0.3f);
+    }
+
+    private void CreateSphere()
+    {
+        pointIndicator = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        pointIndicator.transform.position = Vector3.one * 8000; // Randomly very far lel
+        pointIndicator.transform.localScale = Vector3.one * 3f; // 0.5f;
+        pointIndicator.GetComponent<Renderer>().material = indicatorMaterial;
+        pointIndicator.SetActive(false);
     }
 
     private void SetupInteractions()
@@ -171,7 +185,7 @@ public class LaserPistol : MonoBehaviour
         RaycastHit hit;
         Ray ray = new Ray(transform.position, position - transform.position);
         int layerMask = 1 << LayerMask.NameToLayer("MovableSkybox");
-        if (Physics.Raycast(ray, out hit, 100f, layerMask))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
         {
             drawPoints[drawPoints.Count - 1] = hit.point;
             UpdateDrawing();
@@ -183,8 +197,9 @@ public class LaserPistol : MonoBehaviour
         RaycastHit hit;
         Ray ray = new Ray(transform.position, transform.forward);
         int layerMask = 1 << LayerMask.NameToLayer("MovableSkybox");
-        if (Physics.Raycast(ray, out hit, 100f, layerMask))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
         {
+            pointIndicator.transform.position = hit.point;
             drawPoints[drawPoints.Count - 1] = hit.point;
             UpdateDrawing();
         }
@@ -209,6 +224,7 @@ public class LaserPistol : MonoBehaviour
     private void SelectExited()
     {
         ResetDrawings();
+        pointIndicator.SetActive(false);
         Laser.SetActive(false);
         lineRenderer.enabled = false;
         drawingPlane.GetComponent<Collider>().enabled = false;
@@ -217,11 +233,13 @@ public class LaserPistol : MonoBehaviour
     private void Shoot()
     {
         ResetDrawings();
+        pointIndicator.SetActive(true);
         isDrawing = true;
     }
 
     private void StopShooting()
     {
+        pointIndicator.SetActive(false);
         isDrawing = false;
     }
 
