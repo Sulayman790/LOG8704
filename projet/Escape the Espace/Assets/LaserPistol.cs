@@ -7,6 +7,7 @@ using System;
 
 public class LaserPistol : MonoBehaviour
 {
+    public GameObject movableSkybox;
     public GameObject Laser;
     public Material indicatorMaterial;
     public float drawingPlaneDistance;
@@ -23,6 +24,7 @@ public class LaserPistol : MonoBehaviour
 
     void Start()
     {
+        movableSkybox = GameObject.Find("Movable Skybox");
         SetupLineRenderer();
         CreateDrawingPlane();
         CreateSphere();
@@ -37,15 +39,14 @@ public class LaserPistol : MonoBehaviour
 
     private void SetupLineRenderer()
     {
-        lineRenderer = gameObject.GetComponent<LineRenderer>();
-        if (lineRenderer == null)
-            lineRenderer = gameObject.AddComponent<LineRenderer>();
+        GameObject gameObj = new GameObject("Constellation Drawing");
+        gameObj.transform.SetParent(movableSkybox.transform);
+        lineRenderer = gameObj.AddComponent<LineRenderer>();
 
         // Configure LineRenderer
         lineRenderer.startWidth = 1.5f; // 0.15f;
         lineRenderer.endWidth = 1.5f; // 0.15f;
         lineRenderer.positionCount = 1;
-        lineRenderer.enabled = false;
 
         // Create and set material
         Material lineMaterial = new Material(Shader.Find("Sprites/Default"));
@@ -53,7 +54,7 @@ public class LaserPistol : MonoBehaviour
         lineRenderer.material = lineMaterial;
 
         // Enable color gradient
-        lineRenderer.useWorldSpace = true;
+        lineRenderer.useWorldSpace = false;
         lineRenderer.colorGradient = new Gradient()
         {
             colorKeys = new GradientColorKey[] {
@@ -80,6 +81,7 @@ public class LaserPistol : MonoBehaviour
     private void CreateSphere()
     {
         pointIndicator = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        pointIndicator.name = "Point Indicator";
         pointIndicator.transform.position = Vector3.one * 8000; // Randomly very far lel
         pointIndicator.transform.localScale = Vector3.one * 3f; // 0.5f;
         pointIndicator.GetComponent<Renderer>().material = indicatorMaterial;
@@ -163,6 +165,7 @@ public class LaserPistol : MonoBehaviour
         if (isConstellationCorrect())
         {
             ConstellationManager.Instance.OnCompletedConstellation(currentConstellation);
+            SetupLineRenderer(); // Create a new one (for testing, maybe remove or adjust later)
             isDrawing = false;
         }
     }
@@ -217,17 +220,14 @@ public class LaserPistol : MonoBehaviour
     private void SelectEntered()
     {
         Laser.SetActive(true);
-        lineRenderer.enabled = true;
-        drawingPlane.GetComponent<Collider>().enabled = true;
+        // drawingPlane.GetComponent<Collider>().enabled = true;
     }
 
     private void SelectExited()
     {
-        ResetDrawings();
         pointIndicator.SetActive(false);
         Laser.SetActive(false);
-        lineRenderer.enabled = false;
-        drawingPlane.GetComponent<Collider>().enabled = false;
+        // drawingPlane.GetComponent<Collider>().enabled = false;
     }
 
     private void Shoot()
