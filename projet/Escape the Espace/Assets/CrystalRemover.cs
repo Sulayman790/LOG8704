@@ -2,13 +2,31 @@ using UnityEngine;
 
 public class CrystalRemover : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void Start()
+    private TriggerTrash triggerZone;
+
+    private void Start()
     {
-        GetComponent<TriggerZone>().OnEnterEvent.AddListener(RemoveCrystal);
+        triggerZone = GetComponent<TriggerTrash>();
+        if (triggerZone != null)
+        {
+            triggerZone.OnEnterEvent.AddListener(RemoveCrystal);
+        }
+        else
+        {
+            Debug.LogError("No TriggerZone component found on this GameObject.");
+        }
     }
 
-    public void RemoveCrystal(GameObject go){
-        go.SetActive(false);
+    private void RemoveCrystal(GameObject go)
+    {
+        if (go != null)
+        {
+            go.SetActive(false);
+            Debug.Log($"GameObject {go.name} has been disabled.");
+        }
+        else
+        {
+            Debug.LogWarning("RemoveCrystal called with a null GameObject.");
+        }
     }
 }
