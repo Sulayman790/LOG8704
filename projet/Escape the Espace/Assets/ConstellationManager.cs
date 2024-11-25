@@ -8,7 +8,8 @@ public class ConstellationManager : MonoBehaviour
 {
     public static ConstellationManager Instance;
 
-    private List<Constellation> constellations;
+    [HideInInspector]
+    public List<Constellation> constellations;
 
     private void Awake()
     {
