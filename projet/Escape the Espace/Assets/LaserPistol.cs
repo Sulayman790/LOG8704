@@ -4,83 +4,73 @@ using System.Collections.Generic;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 using System;
+using UnityEngine.Events;
 
 public class LaserPistol : MonoBehaviour
 {
-    public playSteps stepsManager;
+    playSteps stepsManager;
     public GameObject movableSkybox;
     public GameObject Laser;
+    private Shader shader;
     public Material indicatorMaterial;
-    public float drawingPlaneDistance;
 
     private GameObject pointIndicator;
-    private GameObject drawingPlane;
     private LineRenderer lineRenderer;
-    public List<Vector3> drawPoints = new List<Vector3>() { Vector3.zero };
+
+    private ConstellationLine highlightedConstellationLine = null;
+    private Constellation currentConstellation = null;
+
+    private List<Link> currentLinks = new List<Link>();
+    private List<ConstellationLine> constellationLines = new List<ConstellationLine>();
+
+    private int lastStarNumber = -1;
+
+    private bool isSelected = false;
     private bool isDrawing = false;
 
-    private Constellation currentConstellation = null;
-    private List<Link> starLinks = new List<Link>();
-    private int lastStarNumber = -1;
 
     void Start()
     {
         stepsManager = GameObject.Find("Story").GetComponent<playSteps>();
+        shader = Shader.Find("Legacy Shaders/Particles/Alpha Blended Premultiply");
         movableSkybox = GameObject.Find("Movable Skybox");
-        SetupLineRenderer();
-        CreateDrawingPlane();
-        CreateSphere();
+        CreatePointIndicator();
         SetupInteractions();
     }
 
     void Update()
     {
-        UpdateDrawingPlane();
+        HandleLineHovering();
         HandleDrawing();
+        UpdateTracerPosition();
     }
 
-    private void SetupLineRenderer()
+    private void CreateNewLine(Vector3 position)
     {
-        GameObject gameObj = new GameObject("Constellation Drawing");
+        GameObject gameObj = new GameObject("Line");
         gameObj.transform.SetParent(movableSkybox.transform);
         lineRenderer = gameObj.AddComponent<LineRenderer>();
 
+
         // Configure LineRenderer
-        lineRenderer.startWidth = 1.5f; // 0.15f;
-        lineRenderer.endWidth = 1.5f; // 0.15f;
-        lineRenderer.positionCount = 1;
+        lineRenderer.startWidth = 2f;
+        lineRenderer.endWidth = 2f;
+        lineRenderer.positionCount = 2;
+
+        Vector3[] positions = { position, position };
+        lineRenderer.SetPositions(positions);
 
         // Create and set material
-        Material lineMaterial = new Material(Shader.Find("Sprites/Default"));
-        lineMaterial.color = Color.green; // Set your desired color
-        lineRenderer.material = lineMaterial;
+        lineRenderer.material = new Material(shader);
+
 
         // Enable color gradient
         lineRenderer.useWorldSpace = false;
-        lineRenderer.colorGradient = new Gradient()
-        {
-            colorKeys = new GradientColorKey[] {
-            new GradientColorKey(Color.green, 0.0f),
-            new GradientColorKey(Color.green, 1.0f)
-        },
-            alphaKeys = new GradientAlphaKey[] {
-            new GradientAlphaKey(1.0f, 0.0f),
-            new GradientAlphaKey(1.0f, 1.0f)
-        }
-        };
+        lineRenderer.startColor = Color.green;
+        lineRenderer.endColor = Color.green;
     }
 
-    private void CreateDrawingPlane()
-    {
-        drawingPlane = GameObject.CreatePrimitive(PrimitiveType.Plane);
-        drawingPlane.name = "Drawing Plane";
-        drawingPlane.layer = LayerMask.NameToLayer("DrawingSkybox");
-        drawingPlane.GetComponent<MeshRenderer>().enabled = false;
-        drawingPlane.GetComponent<Collider>().enabled = false;
-        drawingPlane.transform.localScale = new Vector3(0.3f, 1f, 0.3f);
-    }
-
-    private void CreateSphere()
+    private void CreatePointIndicator()
     {
         pointIndicator = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         pointIndicator.name = "Point Indicator";
@@ -99,36 +89,65 @@ public class LaserPistol : MonoBehaviour
         grabInteractable.deactivated.AddListener(x => StopShooting());
     }
 
-    private void UpdateDrawingPlane()
-    {
-        Vector3 planePosition = transform.position + transform.forward * drawingPlaneDistance;
-        drawingPlane.transform.position = planePosition;
-        drawingPlane.transform.LookAt(transform.position);
-        drawingPlane.transform.Rotate(90, 0, 0);
-    }
-
     private void HandleDrawing()
     {
-        if (isDrawing)
-        {
-            // See if it touches a star
-            RaycastHit hit;
-            Ray ray = new Ray(transform.position, transform.forward);
-            LayerMask layerMask = LayerMask.GetMask("Star");
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
-            {
-                TryConnectStar(hit);
-            }
+        if (!isDrawing) return;
 
-            UpdateTracerPosition();
+        // See if it touches a star
+        RaycastHit hit;
+        Ray ray = new Ray(transform.position, transform.forward);
+        LayerMask layerMask = LayerMask.GetMask("Star");
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+        {
+            TryConnectStar(hit);
         }
+    }
+
+    private void HandleLineHovering()
+    {
+        if (!isSelected || isDrawing) return;
+
+        // See if it touches a line
+        RaycastHit hit;
+        Ray ray = new Ray(transform.position, transform.forward);
+        LayerMask layerMask = LayerMask.GetMask("ConstellationLine");
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+        {
+            ConstellationLine touchedConstellationLine = hit.transform.parent.gameObject.GetComponent<ConstellationLine>();
+            if (highlightedConstellationLine != null && touchedConstellationLine != highlightedConstellationLine)
+            {
+                highlightedConstellationLine.UnhighlightLink();
+            }
+            highlightedConstellationLine = touchedConstellationLine;
+            highlightedConstellationLine.HighlightLink();
+        }
+        else if (highlightedConstellationLine != null)
+        {
+            highlightedConstellationLine.UnhighlightLink();
+            highlightedConstellationLine = null;
+        }
+    }
+
+    private void CancelConnection()
+    {
+        if (lineRenderer == null) return;
+        GameObject.Destroy(lineRenderer.gameObject);
+        lineRenderer = null;
     }
 
     private void TryConnectStar(RaycastHit hit)
     {
         // Check if we're still in the same constellation (or no constellation yet)
         Constellation touchedConstellation = hit.transform.parent.GetComponent<Constellation>();
-        if (currentConstellation != null && touchedConstellation != currentConstellation) return;
+        if (lastStarNumber == -1)
+        {
+            if (currentConstellation != null && currentConstellation != touchedConstellation)
+            {
+                ResetConstellationProgress();
+            }
+            currentConstellation = touchedConstellation;
+        }
+        else if (touchedConstellation != currentConstellation) return;
 
         int starNumber = Int32.Parse(hit.transform.name);
 
@@ -139,8 +158,8 @@ public class LaserPistol : MonoBehaviour
             currentConstellation = touchedConstellation; // Set current constellation
 
             lastStarNumber = starNumber;
-            MoveTracerToPosition(hit.transform.position);
-            drawPoints.Add(Vector3.zero);
+
+            CreateNewLine(hit.transform.position);
 
             return;
         }
@@ -148,28 +167,31 @@ public class LaserPistol : MonoBehaviour
         // Cancel if we're touching the same star as last one
         if (starNumber == lastStarNumber) return;
 
-        Debug.Log("Star touched!");
-
         Link currentLink = new Link(lastStarNumber, starNumber);
 
         // If the link between two stars doesnt exists, connect it.
-        if (starLinks.Contains(currentLink) == false)
+        if (currentLinks.Contains(currentLink) == false)
         {
-            starLinks.Add(currentLink);
-            MoveTracerToPosition(hit.transform.position);
-            drawPoints.Add(Vector3.zero);
-            lastStarNumber = starNumber;
+            currentLinks.Add(currentLink);
+            lineRenderer.SetPosition(1, hit.transform.position);
+            ConstellationLine constellationLine = lineRenderer.gameObject.AddComponent<ConstellationLine>();
+            constellationLines.Add(constellationLine);
+            constellationLine.starLink = currentLink;
 
-            Debug.Log("Added link [" + currentLink.StarA + ", " + currentLink.StarB + "]");
+            CreateNewLine(hit.transform.position);
+            lastStarNumber = starNumber;
         }
 
-        // Verify if the constellation is completed
+        VerifyConstellationCompletion();
+    }
+
+    private void VerifyConstellationCompletion()
+    {
         if (isConstellationCorrect())
         {
             ConstellationManager.Instance.OnCompletedConstellation(currentConstellation);
-            if(stepsManager.steps[0].hasPlayed && currentConstellation.name == "Cassiopee")
+            if (stepsManager.steps[0].hasPlayed && currentConstellation.name == "Cassiopee")
                 stepsManager.PlayStepIndex(6);
-            SetupLineRenderer();
             isDrawing = false;
         }
     }
@@ -177,26 +199,14 @@ public class LaserPistol : MonoBehaviour
     private bool isConstellationCorrect()
     {
         if (currentConstellation == null) return false;
-        if (currentConstellation.links.Count != starLinks.Count) return false;
+        if (currentConstellation.links.Count != currentLinks.Count) return false;
 
         foreach (Link link in currentConstellation.links)
         {
-            if (starLinks.Contains(link) == false) return false;
+            if (currentLinks.Contains(link) == false) return false;
         }
 
         return true;
-    }
-
-    private void MoveTracerToPosition(Vector3 position)
-    {
-        RaycastHit hit;
-        Ray ray = new Ray(transform.position, position - transform.position);
-        int layerMask = 1 << LayerMask.NameToLayer("MovableSkybox");
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
-        {
-            drawPoints[drawPoints.Count - 1] = hit.point;
-            UpdateDrawing();
-        }
     }
 
     private void UpdateTracerPosition()
@@ -207,51 +217,61 @@ public class LaserPistol : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
         {
             pointIndicator.transform.position = hit.point;
-            drawPoints[drawPoints.Count - 1] = hit.point;
-            UpdateDrawing();
-        }
-    }
-
-    private void UpdateDrawing()
-    {
-        if (drawPoints.Count > 0)
-        {
-            lineRenderer.positionCount = drawPoints.Count;
-            lineRenderer.SetPositions(drawPoints.ToArray());
+            if (lineRenderer != null) lineRenderer.SetPosition(1, hit.point);
         }
     }
 
     private void SelectEntered()
     {
+        isSelected = true;
+        pointIndicator.SetActive(true);
         Laser.SetActive(true);
-        // drawingPlane.GetComponent<Collider>().enabled = true;
     }
 
     private void SelectExited()
     {
+        isSelected = false;
+        CancelConnection();
+        lastStarNumber = -1;
         pointIndicator.SetActive(false);
         Laser.SetActive(false);
-        // drawingPlane.GetComponent<Collider>().enabled = false;
+
+        if (highlightedConstellationLine != null)
+        {
+            highlightedConstellationLine.UnhighlightLink();
+            highlightedConstellationLine = null;
+        }
+    }
+
+    private void ResetConstellationProgress()
+    {
+        foreach (ConstellationLine line in constellationLines)
+        {
+            GameObject.Destroy(line.gameObject);
+        }
+        currentLinks.Clear();
+        constellationLines.Clear();
     }
 
     private void Shoot()
     {
-        ResetDrawings();
-        pointIndicator.SetActive(true);
-        isDrawing = true;
+        lastStarNumber = -1;
+
+        if (highlightedConstellationLine != null)
+        {
+            // Remove link, remove line, destroy line
+            currentLinks.Remove(highlightedConstellationLine.starLink);
+            constellationLines.Remove(highlightedConstellationLine);
+            GameObject.Destroy(highlightedConstellationLine.gameObject);
+            highlightedConstellationLine = null;
+            VerifyConstellationCompletion();
+        }
+        else isDrawing = true;
     }
 
     private void StopShooting()
     {
-        pointIndicator.SetActive(false);
+        CancelConnection();
         isDrawing = false;
-    }
-
-    private void ResetDrawings()
-    {
-        currentConstellation = null;
-        starLinks.Clear();
-        lastStarNumber = -1;
-        drawPoints = new List<Vector3> { Vector3.zero };
     }
 }
