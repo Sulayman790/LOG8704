@@ -5270,7 +5270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b50856be2b781c41b7dfff935dff61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playSteps: {fileID: 0}
+  stepsManager: {fileID: 0}
   movableSkybox: {fileID: 0}
   Laser: {fileID: 228471661}
   indicatorMaterial: {fileID: 2100000, guid: 547847986c4604345b62b38b38e634ea, type: 2}
