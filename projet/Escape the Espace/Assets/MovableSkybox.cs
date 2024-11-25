@@ -1,4 +1,3 @@
-using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR.Content.Interaction;
 
@@ -17,7 +16,7 @@ public class MovableSkybox : MonoBehaviour
     {
         if (controller.value != Vector2.zero)
         {
-            Vector3 rotation = new Vector3(-controller.value.y * rotationSpeed, 0, controller.value.x * rotationSpeed);
+            Vector3 rotation = new Vector3(-controller.value.y * rotationSpeed, - controller.value.x * rotationSpeed, 0);
             transform.Rotate(Quaternion.Inverse(Quaternion.Euler(transform.rotation.eulerAngles)) * rotation);
         }
     }
