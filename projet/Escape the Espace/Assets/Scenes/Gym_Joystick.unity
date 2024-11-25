@@ -4409,8 +4409,11 @@ MonoBehaviour:
   - name: Place cristaux
     time: 122.5333
     hasPlayed: 0
-  - name: Place cristaux
-    time: 122.5333
+  - name: Trouve cassiopee
+    time: 162.974
+    hasPlayed: 0
+  - name: Mission cassiopee
+    time: 185.078
     hasPlayed: 0
 --- !u!114 &645096371
 MonoBehaviour:
@@ -4697,7 +4700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5267,6 +5270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b50856be2b781c41b7dfff935dff61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playSteps: {fileID: 0}
   movableSkybox: {fileID: 0}
   Laser: {fileID: 228471661}
   indicatorMaterial: {fileID: 2100000, guid: 547847986c4604345b62b38b38e634ea, type: 2}
