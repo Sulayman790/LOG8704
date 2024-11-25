@@ -4,12 +4,10 @@ using System.Collections.Generic;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 using System;
-using UnityEngine.Rendering;
-
 
 public class LaserPistol : MonoBehaviour
 {
-    public playSteps playSteps;
+    public playSteps stepsManager;
     public GameObject movableSkybox;
     public GameObject Laser;
     public Material indicatorMaterial;
@@ -27,6 +25,7 @@ public class LaserPistol : MonoBehaviour
 
     void Start()
     {
+        stepsManager = GameObject.Find("Story").GetComponent<playSteps>();
         movableSkybox = GameObject.Find("Movable Skybox");
         SetupLineRenderer();
         CreateDrawingPlane();
@@ -167,13 +166,10 @@ public class LaserPistol : MonoBehaviour
         // Verify if the constellation is completed
         if (isConstellationCorrect())
         {
-            playSteps steps = playSteps.GetComponent<playSteps>();
-            if (steps.steps[5].hasPlayed && 
-                currentConstellation.name == "Cassiopee")
-            
             ConstellationManager.Instance.OnCompletedConstellation(currentConstellation);
-            steps.PlayStepIndex(6);
-            SetupLineRenderer(); // Create a new one (for testing, maybe remove or adjust later)
+            if(stepsManager.steps[1].hasPlayed && currentConstellation.name == "Cassiopee")
+                stepsManager.PlayStepIndex(6);
+            SetupLineRenderer();
             isDrawing = false;
         }
     }
@@ -187,7 +183,6 @@ public class LaserPistol : MonoBehaviour
         {
             if (starLinks.Contains(link) == false) return false;
         }
-
 
         return true;
     }
