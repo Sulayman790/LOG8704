@@ -167,7 +167,7 @@ public class LaserPistol : MonoBehaviour
         if (isConstellationCorrect())
         {
             ConstellationManager.Instance.OnCompletedConstellation(currentConstellation);
-            if(stepsManager.steps[1].hasPlayed && currentConstellation.name == "Cassiopee")
+            if(stepsManager.steps[0].hasPlayed && currentConstellation.name == "Cassiopee")
                 stepsManager.PlayStepIndex(6);
             SetupLineRenderer();
             isDrawing = false;
