@@ -7,6 +7,10 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
+    public PanelScreen currentDisplayedPanel;
+    public Button currentSelectedTab;
+
+
     public PanelChallenge panelChallenge;
     public PanelConstellation panelConstellation;
     public PanelSettings panelSettings;
@@ -29,7 +33,12 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         stepManager = GameObject.Find("Story").GetComponent<playSteps>();
-        ShowPanel(0);
+        buttons[0].interactable = false;
+        panelConstellation.gameObject.SetActive(false);
+        panelSettings.gameObject.SetActive(false);
+
+        currentDisplayedPanel = panelChallenge;
+        currentSelectedTab = buttons[0];
     }
 
     void Update()
@@ -39,9 +48,16 @@ public class UIManager : MonoBehaviour
 
     public void ShowPanel(int index)
     {
-        foreach (PanelScreen panel in panels) panel.gameObject.SetActive(false);
+        if (currentDisplayedPanel == panels[index]) return;
+        currentDisplayedPanel.GetComponent<Fade>().FadeOut();
         panels[index].gameObject.SetActive(true);
+        panels[index].GetComponent<Fade>().FadeIn();
         panels[index].UpdateScreen();
+        currentDisplayedPanel = panels[index];
+
+        currentSelectedTab.interactable = true;
+        currentSelectedTab = buttons[index];
+        buttons[index].interactable = false;
     }
 
 

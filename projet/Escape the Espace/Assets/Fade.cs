@@ -4,25 +4,30 @@ using UnityEngine;
 public class Fade : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
-    private float duration = 0.3f;
+    private float duration = 0.25f;
 
     void Start()
     {
         canvasGroup = this.GetComponent<CanvasGroup>();
+        Debug.Log("this is our fokin canvas gruop :" + canvasGroup.name);
     }
 
 
     public void FadeIn()
     {
         StartCoroutine(FadeInRoutine());
-        StartCoroutine(FadeOutRoutine());
+    }
 
+    public void FadeOut()
+    {
+        StartCoroutine(FadeOutRoutine());
     }
 
     IEnumerator FadeInRoutine()
     {
+        this.gameObject.SetActive(true);
         float time = Time.time;
-        while (canvasGroup.alpha != 0)
+        while (canvasGroup.alpha != 1)
         {
             canvasGroup.alpha = Mathf.SmoothStep(0, 1, (Time.time - time) / duration);
             yield return null;
@@ -37,5 +42,6 @@ public class Fade : MonoBehaviour
             canvasGroup.alpha = Mathf.SmoothStep(1, 0, (Time.time - time) / duration);
             yield return null;
         }
+        this.gameObject.SetActive(false);
     }
 }
