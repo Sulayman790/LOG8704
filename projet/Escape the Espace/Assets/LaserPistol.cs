@@ -190,7 +190,7 @@ public class LaserPistol : MonoBehaviour
         if (isConstellationCorrect())
         {
             ConstellationManager.Instance.OnCompletedConstellation(currentConstellation);
-            checkConstellation();
+            CheckConstellation();
             isDrawing = false;
         }
     }
@@ -274,13 +274,12 @@ public class LaserPistol : MonoBehaviour
         isDrawing = false;
     }
 
-    private void checkConstellation() {
-        checkConstellationName("Grande Ours", 1, 2);
-        checkConstellationName("Orion", 5, 6);
-        checkConstellationName("Cassiopee", 7, 8);
+    private void CheckConstellation() {
+        CheckConstellationName("Orion", 4, 5);
+        CheckConstellationName("Cassiopee", 6, 7);
     }
 
-    private void checkConstellationName(string constellationName, int currentSteps, int nextSteps)
+    private void CheckConstellationName(string constellationName, int currentSteps, int nextSteps)
     {
         if (stepsManager.steps[currentSteps].hasPlayed && currentConstellation.name == constellationName)
             stepsManager.PlayStepIndex(nextSteps);
