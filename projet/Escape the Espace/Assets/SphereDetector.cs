@@ -5,6 +5,7 @@ public class SphereVisibilityDetector : MonoBehaviour
 {
     private Camera mainCamera;
     public float focusZoneSize = 0.2f;
+    public LayerMask layerMask;
     private bool isVisible = false;
     public UnityEvent StarFound;
 
@@ -24,7 +25,7 @@ public class SphereVisibilityDetector : MonoBehaviour
         {
             Vector3 directionToCamera = mainCamera.transform.position - transform.position;
             RaycastHit hit;
-            if (Physics.Raycast(mainCamera.transform.position, -directionToCamera.normalized, out hit))
+            if (Physics.Raycast(mainCamera.transform.position, -directionToCamera.normalized, out hit, 1000f, ~layerMask))
             {
                 if (hit.collider.gameObject == gameObject)
                 {
