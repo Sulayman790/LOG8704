@@ -59,7 +59,6 @@ public class UIManager : MonoBehaviour
     public void UpdateChallenge()
     {
         int index = GetLastPlayedStepIndex();
-        Debug.Log("I got called!!!! with " + GetLastPlayedStepIndex());
         PanelChallenge panel = UIManager.Instance.panelChallenge;
         if (index == 0) panel.UpdateChallengeText("Defi #1", "Pese le boutton rouge !");
         if (index == 1) { panel.UpdateChallengerNumber("Defi #2"); panel.ShowGrandeOurse(); }
