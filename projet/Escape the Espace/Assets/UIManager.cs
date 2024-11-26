@@ -61,10 +61,14 @@ public class UIManager : MonoBehaviour
         int index = GetLastPlayedStepIndex();
         Debug.Log("I got called!!!! with " + GetLastPlayedStepIndex());
         PanelChallenge panel = UIManager.Instance.panelChallenge;
-        if (index == 0) panel.UpdateChallengeText("Defi #1", "Demarre le moteur avec la poele !");
-        if (index == 1) panel.UpdateChallengeText("Defi #2", "Trouve la grande orion. Utilise la chose pour bouger");
-        if (index == 2) panel.UpdateChallengeText("Defi #3", "Dessine la grande ourse boi.");
-
-
+        if (index == 0) panel.UpdateChallengeText("Defi #1", "Pese le boutton rouge !");
+        if (index == 1) { panel.UpdateChallengerNumber("Defi #2"); panel.ShowGrandeOurse(); }
+        if (index == 2) panel.UpdateChallengeText("Defi #3", "Alimente le moteur avec la casserole .");
+        if (index == 3) { panel.UpdateChallengerNumber("Defi #4"); panel.ShowEtoilePolaire(); }
+        if (index == 4) panel.UpdateChallengeText("Defi #5", "Alimente le moteur avec les cristaux.");
+        if (index == 5) { panel.UpdateChallengerNumber("Defi #6"); panel.ShowOrion(); }
+        if (index == 6) panel.UpdateChallengeText("Defi #7", "Brise les asteorides");
+        if (index == 7) { panel.UpdateChallengerNumber("Defi #8"); panel.ShowCasiopee(); }
+        if (index == 8) panel.UpdateChallengeText("Defi #9", "Alimente la machine avec l'energie.");
     }
 }
