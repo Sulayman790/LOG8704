@@ -189,7 +189,7 @@ public class LaserPistol : MonoBehaviour
     {
         if (isConstellationCorrect())
         {
-            ConstellationManager.Instance.OnCompletedConstellation(currentConstellation);
+            ConstellationManager.Instance.AddConstellation(currentConstellation.name);
             CheckConstellation();
             isDrawing = false;
         }

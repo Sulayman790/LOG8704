@@ -59,15 +59,47 @@ public class UIManager : MonoBehaviour
     public void UpdateChallenge()
     {
         int index = GetLastPlayedStepIndex();
-        PanelChallenge panel = UIManager.Instance.panelChallenge;
-        if (index == 0) panel.UpdateChallengeText("Defi #1", "Pese le boutton rouge !");
-        if (index == 1) { panel.UpdateChallengerNumber("Defi #2"); panel.ShowGrandeOurse(); }
-        if (index == 2) panel.UpdateChallengeText("Defi #3", "Alimente le moteur avec la casserole .");
-        if (index == 3) { panel.UpdateChallengerNumber("Defi #4"); panel.ShowEtoilePolaire(); }
-        if (index == 4) panel.UpdateChallengeText("Defi #5", "Alimente le moteur avec les cristaux.");
-        if (index == 5) { panel.UpdateChallengerNumber("Defi #6"); panel.ShowOrion(); }
-        if (index == 6) panel.UpdateChallengeText("Defi #7", "Brise les asteorides");
-        if (index == 7) { panel.UpdateChallengerNumber("Defi #8"); panel.ShowCasiopee(); }
-        if (index == 8) panel.UpdateChallengeText("Defi #9", "Alimente la machine avec l'energie.");
+        PanelChallenge challengePanel = UIManager.Instance.panelChallenge;
+        if (index == 0) challengePanel.UpdateChallengeText("Defi #1", "Pese le boutton rouge !");
+        if (index == 1) 
+        { 
+            challengePanel.UpdateChallengerNumber("Defi #2"); 
+            challengePanel.ShowGrandeOurse(); 
+        }
+        if (index == 2) 
+        {
+            ConstellationManager.Instance.AddConstellation("Grande Ourse");
+            challengePanel.UpdateChallengeText("Defi #3", "Alimente le moteur avec la casserole .");
+        };
+        if (index == 3) 
+        { 
+            challengePanel.UpdateChallengerNumber("Defi #4"); 
+            challengePanel.ShowEtoilePolaire(); 
+        }
+        if (index == 4) 
+        {
+            ConstellationManager.Instance.AddConstellation("Petite Ourse");
+            challengePanel.UpdateChallengeText("Defi #5", "Alimente le moteur avec les cristaux.");
+        };
+        if (index == 5) 
+        { 
+            challengePanel.UpdateChallengerNumber("Defi #6"); 
+            challengePanel.ShowOrion(); 
+        }
+        if (index == 6) 
+        {
+            ConstellationManager.Instance.AddConstellation("Orion");
+            challengePanel.UpdateChallengeText("Defi #7", "Brise les asteorides"); 
+        }
+        if (index == 7) 
+        { 
+            challengePanel.UpdateChallengerNumber("Defi #8"); 
+            challengePanel.ShowCasiopee(); 
+        }
+        if (index == 8) 
+        {
+            ConstellationManager.Instance.AddConstellation("Cassiopee");
+            challengePanel.UpdateChallengeText("Defi #9", "Alimente la machine avec l'energie.");
+        };
     }
 }
