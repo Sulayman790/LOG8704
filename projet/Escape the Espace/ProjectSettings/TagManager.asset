@@ -29,8 +29,8 @@ TagManager:
   - DrawingSkybox
   - ConstellationLine
   - Floor
-  - 
-  - 
+  - ObjectLimit
+  - Object
   - 
   - 
   - 
