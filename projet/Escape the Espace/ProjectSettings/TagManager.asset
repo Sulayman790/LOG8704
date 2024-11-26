@@ -15,6 +15,9 @@ TagManager:
   - crystal
   - star
   - Sword
+  - Red Energy
+  - Blue Energy
+  - Green Energy
   layers:
   - Default
   - TransparentFX
