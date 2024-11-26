@@ -7,6 +7,10 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
+    public PanelChallenge panelChallenge;
+    public PanelConstellation panelConstellation;
+    public PanelSettings panelSettings;
+
     private void Awake()
     {
         if (Instance)
@@ -22,6 +26,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        ShowPanel(0);
     }
 
     void Update()
@@ -35,6 +40,4 @@ public class UIManager : MonoBehaviour
         panels[index].gameObject.SetActive(true);
         panels[index].UpdateScreen();
     }
-
-
 }

@@ -9,6 +9,9 @@ public class Constellation : MonoBehaviour
     public String nomConstellation;
     public List<Link> links;
 
+    [HideInInspector]
+    public bool found = false;
+
 
     // Cette fonction est appelé seulement en mode Editeur
     // Pour debogger les constellations

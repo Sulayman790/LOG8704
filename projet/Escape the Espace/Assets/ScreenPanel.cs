@@ -1,21 +1,6 @@
 using UnityEngine;
 
-public class PanelScreen : MonoBehaviour
+public class ScreenPanel
 {
-    // Make a new class that inherits from this class and modify the UpdateScreen() behavior.
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
-    public virtual void UpdateScreen()
-    {
-
-    }
+    
 }
