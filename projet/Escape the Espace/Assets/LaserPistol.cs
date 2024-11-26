@@ -275,9 +275,8 @@ public class LaserPistol : MonoBehaviour
     }
 
     private void checkConstellation() {
-        checkConstellationName("Grande Ours", 1, 2);
-        checkConstellationName("Orion", 5, 6);
-        checkConstellationName("Cassiopee", 7, 8);
+        checkConstellationName("Orion", 4, 5);
+        checkConstellationName("Cassiopee", 6, 7);
     }
 
     private void checkConstellationName(string constellationName, int currentSteps, int nextSteps)
