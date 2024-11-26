@@ -30,7 +30,7 @@ public class PanelConstellation : PanelScreen
 
     public override void UpdateScreen()
     {
-        if (pageIndex == -1 && ConstellationManager.Instance.foundConstellations.Count != 0) pageIndex = 0;
+        if (pageIndex == -1 && ConstellationManager.Instance.foundConstellationNames.Count != 0) pageIndex = 0;
         ShowPanelFromIndex();
     }
 
@@ -46,7 +46,7 @@ public class PanelConstellation : PanelScreen
 
     public void RightArrowPressed()
     {
-        if (pageIndex > ConstellationManager.Instance.foundConstellations.Count) return;
+        if (pageIndex > ConstellationManager.Instance.foundConstellationNames.Count) return;
         pageIndex += 1;
 
         ShowPanelFromIndex();
@@ -54,7 +54,7 @@ public class PanelConstellation : PanelScreen
 
     private void ShowPanelFromIndex()
     {
-        List<Constellation> foundConstellations = ConstellationManager.Instance.foundConstellations;
+        List<string> foundConstellations = ConstellationManager.Instance.foundConstellationNames;
         leftButton.interactable = pageIndex > 0;
         rightButton.interactable = (pageIndex != -1) && pageIndex < foundConstellations.Count -1;
         indexText.text = (pageIndex + 1) + "/" + foundConstellations.Count;
@@ -66,11 +66,11 @@ public class PanelConstellation : PanelScreen
         }
         else
         {
-            Constellation constellation = foundConstellations[pageIndex];
-            if (constellation.name == "Grande Ourse") panelGrandeOurse.SetActive(true);
-            if (constellation.name == "Orion") panelOrion.SetActive(true);
-            if (constellation.name == "Cassiopee") panelCassiopee.SetActive(true);
-            if (constellation.name == "Petite Ourse") panelGrandChien.SetActive(true);
+            string constellationName = foundConstellations[pageIndex];
+            if (constellationName == "Grande Ourse") panelGrandeOurse.SetActive(true);
+            if (constellationName == "Petite Ourse") panelGrandChien.SetActive(true);
+            if (constellationName == "Orion") panelOrion.SetActive(true);
+            if (constellationName == "Cassiopee") panelCassiopee.SetActive(true);
         }
 
     }

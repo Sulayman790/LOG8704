@@ -8,11 +8,14 @@ public class ConstellationManager : MonoBehaviour
 {
     public static ConstellationManager Instance;
 
-    [HideInInspector]
-    public List<Constellation> constellations;
+    //[HideInInspector]
+    //public List<Constellation> constellations;
+
+    // [HideInInspector]
+    //public List<Constellation> foundConstellations;
 
     [HideInInspector]
-    public List<Constellation> foundConstellations;
+    public List<string> foundConstellationNames;
 
     private void Awake()
     {
@@ -26,10 +29,10 @@ public class ConstellationManager : MonoBehaviour
 
     void Start()
     {
-        constellations = FindObjectsByType<Constellation>(FindObjectsSortMode.None).ToList();
-        foundConstellations.Add(constellations[0]);
-        foundConstellations.Add(constellations[1]);
-        foundConstellations.Add(constellations[2]);
+        //constellations = FindObjectsByType<Constellation>(FindObjectsSortMode.None).ToList();
+        //foundConstellations.Add(constellations[0]);
+        //foundConstellations.Add(constellations[1]);
+        //foundConstellations.Add(constellations[2]);
 
     }
 
@@ -38,10 +41,9 @@ public class ConstellationManager : MonoBehaviour
         
     }
 
-    public void OnCompletedConstellation(Constellation constellation)
+    public void AddConstellation(string name)
     {
-        Debug.Log("Wow you completed " + constellation.name + "!");
-        foundConstellations.Add(constellation);
+        if (!foundConstellationNames.Contains(name)) foundConstellationNames.Add(name);
         UIManager.Instance.panelConstellation.UpdateScreen();
     }
 }
