@@ -1,34 +1,27 @@
+using System.Globalization;
 using TMPro;
+using Unity.VRTemplate;
 using UnityEngine;
 
 public class PanelChallenge : PanelScreen
 {
+    private playSteps stepManager;
     public TextMeshProUGUI NumberText;
     public TextMeshProUGUI DescriptionText;
 
     void Start()
     {
-        
+        stepManager = GameObject.Find("Story").GetComponent<playSteps>();
     }
 
     public override void UpdateScreen()
     {
     }
 
-
-    // If too lazy to access the objects themselves above lel
-    public void UpdateNumberText(string text)
+    public void UpdateChallengeText(string challenge, string description, float fontSize =5)
     {
-        NumberText.text = text;
-    }
-
-    public void UpdateDescriptionText(string text)
-    {
-        DescriptionText.text = text;
-    }
-
-    public void UpdateDescriptionFontSize(float fontSize)
-    {
+        NumberText.text = challenge;
+        DescriptionText.text = description;
         DescriptionText.fontSize = fontSize;
     }
 }
