@@ -7,7 +7,10 @@ Shader "Custom/ShowInsideWithCubemapURP"
 
     SubShader
     {
-        Tags { "RenderPipeline" = "UniversalRenderPipeline" "RenderType" = "Opaque" }
+        Tags {
+            "RenderType" = "Opaque"
+            "RenderPipeline" = "UniversalPipeline"
+        }
 
         Pass
         {
