@@ -6,21 +6,25 @@ public class Breakable : MonoBehaviour
 {
     public List<GameObject> breakablePieces;
     public static event System.Action OnBreakableDestroyed;
+    private AudioSource audioSource;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         foreach (var item in breakablePieces){
             item.SetActive(false);
         }
     }
 
     public void Break(){
+        audioSource.Play();
         foreach (var item in breakablePieces)
         {
             item.SetActive(true);
             item.transform.parent = null;
         }
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        GetComponent<MeshRenderer>().enabled = false;
         OnBreakableDestroyed?.Invoke();
     }
 
