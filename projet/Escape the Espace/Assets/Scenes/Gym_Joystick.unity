@@ -10203,6 +10203,7 @@ Transform:
   - {fileID: 1525211439}
   - {fileID: 943491074}
   - {fileID: 1358373303}
+  - {fileID: 1164541442}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1107984197
@@ -10910,15 +10911,15 @@ Transform:
   m_GameObject: {fileID: 1164541439}
   serializedVersion: 2
   m_LocalRotation: {x: 0.28284374, y: -0, z: -0, w: 0.959166}
-  m_LocalPosition: {x: -1.5706329, y: 0, z: -1.571062}
-  m_LocalScale: {x: 1620.0001, y: 1620.0001, z: 1620.0001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3000, y: 3000, z: 3000}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1526786451}
   - {fileID: 1016126588}
   - {fileID: 2042756756}
   - {fileID: 1092714224}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1107984196}
   m_LocalEulerAnglesHint: {x: 32.86, y: 0, z: 0}
 --- !u!114 &1164541443
 MonoBehaviour:
@@ -20957,6 +20958,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2264300267170822242, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
+      propertyPath: m_text
+      value: Trouver l'etoire polaire.
+      objectReference: {fileID: 0}
     - target: {fileID: 2433845608584960085, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -21543,6 +21548,10 @@ PrefabInstance:
         Cette constellation en forme de \"W\" est visible toute l\u2019ann\xE9e dans
         l\u2019h\xE9misph\xE8re nord. Cela fait un beau parall\xE8le avec son histoire."
       objectReference: {fileID: 0}
+    - target: {fileID: 7134767081505262643, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
+      propertyPath: m_text
+      value: Regarder la Grande Ourse.
+      objectReference: {fileID: 0}
     - target: {fileID: 7231892494144132465, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -21606,6 +21615,14 @@ PrefabInstance:
     - target: {fileID: 8443020883766954162, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039496165608279068, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
+      propertyPath: m_text
+      value: "Tracer Cassiop\xE9e."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079712447752608415, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
+      propertyPath: m_text
+      value: Tracer Orion.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25861,7 +25878,6 @@ SceneRoots:
   - {fileID: 1370030350}
   - {fileID: 1693281790}
   - {fileID: 936969274}
-  - {fileID: 1164541442}
   - {fileID: 1107984196}
   - {fileID: 668200198}
   - {fileID: 645096369}

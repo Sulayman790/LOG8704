@@ -78,58 +78,52 @@ public class UIManager : MonoBehaviour
     {
         int index = GetLastPlayedStepIndex();
         PanelChallenge challengePanel = Instance.panelChallenge;
-        if (index == 0) 
-        {
-            challengePanel.UpdateChallengeText("Defi #1", "Appuyer sur le bouton");
-            return;
-        }
-
         audioSource.Play();
 
         if (index == 1) 
         { 
-            challengePanel.UpdateChallengerNumber("Defi #2"); 
+            challengePanel.UpdateChallengerNumber("Defi #1");
             challengePanel.ShowGrandeOurse(); 
         }
         if (index == 2) 
         {
             ConstellationManager.Instance.AddConstellation("Grande Ourse");
-            challengePanel.UpdateChallengeText("Defi #3", "Complêter le moteur");
+            challengePanel.UpdateChallengeText("Defi #2", "Complêter le moteur.");
         }
 
         if (index == 3)
         { 
-            challengePanel.UpdateChallengerNumber("Defi #4"); 
+            challengePanel.UpdateChallengerNumber("Defi #3");
             challengePanel.ShowEtoilePolaire(); 
         }
         if (index == 4) 
         {
             ConstellationManager.Instance.AddConstellation("Petite Ourse");
-            challengePanel.UpdateChallengeText("Defi #5", "Alimenter le moteur");
+            challengePanel.UpdateChallengeText("Defi #4", "Alimenter le moteur.");
         }
         if (index == 5) 
         { 
-            challengePanel.UpdateChallengerNumber("Defi #6"); 
+            challengePanel.UpdateChallengerNumber("Defi #5");
             challengePanel.ShowOrion(); 
         }
         if (index == 6) 
         {
             ConstellationManager.Instance.AddConstellation("Orion");
-            challengePanel.UpdateChallengeText("Defi #7", "Couper les astéroïdes");
+            challengePanel.UpdateChallengeText("Defi #6", "Couper les astéroïdes.");
         }
         if (index == 7) 
         { 
-            challengePanel.UpdateChallengerNumber("Defi #8"); 
+            challengePanel.UpdateChallengerNumber("Defi #7");
             challengePanel.ShowCasiopee(); 
         }
         if (index == 8) 
         {
             ConstellationManager.Instance.AddConstellation("Cassiopee");
-            challengePanel.UpdateChallengeText("Defi #9", "Activer le téléporteur");
+            challengePanel.UpdateChallengeText("Defi #8", "Activer le téléporteur.");
         }
         if (index == 9)
         {
-            challengePanel.UpdateChallengeText("Bien joué!", "Le vaisseau est réparé!");
+            challengePanel.UpdateChallengeText("", "Bien joué!\nLe vaisseau est réparé!");
         }
     }
 
