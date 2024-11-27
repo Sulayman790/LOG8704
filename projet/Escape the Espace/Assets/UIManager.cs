@@ -10,12 +10,12 @@ public class UIManager : MonoBehaviour
     public PanelScreen currentDisplayedPanel;
     public Button currentSelectedTab;
 
-
     public PanelChallenge panelChallenge;
     public PanelConstellation panelConstellation;
     public PanelSettings panelSettings;
 
     private playSteps stepManager;
+    private AudioSource audioSource;
 
     private void Awake()
     {
@@ -32,6 +32,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        audioSource = this.GetComponent<AudioSource>();
         stepManager = GameObject.Find("Story").GetComponent<playSteps>();
         buttons[0].interactable = false;
         panelConstellation.gameObject.SetActive(false);
@@ -72,11 +73,20 @@ public class UIManager : MonoBehaviour
 
         return index;
     }
+
+    // 10x enginner code right there
     public void UpdateChallenge()
     {
         int index = GetLastPlayedStepIndex();
         PanelChallenge challengePanel = UIManager.Instance.panelChallenge;
-        if (index == 0) challengePanel.UpdateChallengeText("Defi #1", "Pese le boutton rouge !");
+        if (index == 0) 
+        {
+            challengePanel.UpdateChallengeText("Defi #1", "Pese le boutton rouge !");
+            return;
+         };
+
+        audioSource.Play();
+
         if (index == 1) 
         { 
             challengePanel.UpdateChallengerNumber("Defi #2"); 
