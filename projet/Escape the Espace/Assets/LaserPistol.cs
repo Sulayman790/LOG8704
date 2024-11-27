@@ -14,6 +14,10 @@ public class LaserPistol : MonoBehaviour
     private Shader shader;
     public Material indicatorMaterial;
 
+    public AudioSource linkAudioSource;
+    public AudioSource unlinkAudioSource;
+
+
     private GameObject pointIndicator;
     private LineRenderer lineRenderer;
 
@@ -180,6 +184,8 @@ public class LaserPistol : MonoBehaviour
 
             CreateNewLine(hit.transform.position);
             lastStarNumber = starNumber;
+
+            linkAudioSource.Play();
         }
 
         VerifyConstellationCompletion();
@@ -262,6 +268,7 @@ public class LaserPistol : MonoBehaviour
             constellationLines.Remove(highlightedConstellationLine);
             GameObject.Destroy(highlightedConstellationLine.gameObject);
             highlightedConstellationLine = null;
+            unlinkAudioSource.Play();
             VerifyConstellationCompletion();
         }
         else isDrawing = true;
