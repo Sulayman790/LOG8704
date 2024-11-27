@@ -12,15 +12,18 @@ public class PanelConstellation : PanelScreen
     public GameObject panelGrandChien;
     public GameObject panelNoConstellations;
 
+    public GameObject notificationIndicator;
+
     public Button leftButton;
     public Button rightButton;
     public TextMeshProUGUI indexText;
 
     private int pageIndex = -1;
 
+
     void Start()
     {
-        
+        notificationIndicator.SetActive(false);
     }
 
     void Update()
@@ -30,10 +33,12 @@ public class PanelConstellation : PanelScreen
 
     public override void UpdateScreen()
     {
+        notificationIndicator.SetActive(mustNotify && UIManager.Instance.currentDisplayedPanel != this);
+        mustNotify = false;
+
         if (pageIndex == -1 && ConstellationManager.Instance.foundConstellationNames.Count != 0) pageIndex = 0;
         ShowPanelFromIndex();
     }
-
 
 
     public void LeftArrowPressed()

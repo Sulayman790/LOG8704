@@ -44,6 +44,7 @@ public class ConstellationManager : MonoBehaviour
     public void AddConstellation(string name)
     {
         if (!foundConstellationNames.Contains(name)) foundConstellationNames.Add(name);
+        UIManager.Instance.panelConstellation.mustNotify = true;
         UIManager.Instance.panelConstellation.UpdateScreen();
     }
 }
