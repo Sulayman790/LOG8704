@@ -224,7 +224,6 @@ public class LaserPistol : MonoBehaviour
     {
         isSelected = true;
         pointIndicator.SetActive(true);
-        Laser.SetActive(true);
     }
 
     private void SelectExited()
@@ -233,7 +232,6 @@ public class LaserPistol : MonoBehaviour
         CancelConnection();
         lastStarNumber = -1;
         pointIndicator.SetActive(false);
-        Laser.SetActive(false);
 
         if (highlightedConstellationLine != null)
         {
@@ -255,6 +253,7 @@ public class LaserPistol : MonoBehaviour
     private void Shoot()
     {
         lastStarNumber = -1;
+        Laser.SetActive(true);
 
         if (highlightedConstellationLine != null)
         {
@@ -272,6 +271,7 @@ public class LaserPistol : MonoBehaviour
     {
         CancelConnection();
         isDrawing = false;
+        Laser.SetActive(false);
     }
 
     private void CheckConstellation() {
