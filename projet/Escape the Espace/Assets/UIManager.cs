@@ -14,6 +14,8 @@ public class UIManager : MonoBehaviour
     public PanelConstellation panelConstellation;
     public PanelSettings panelSettings;
 
+    public AudioSource clickAudio;
+
     private playSteps stepManager;
     private AudioSource audioSource;
 
@@ -50,6 +52,9 @@ public class UIManager : MonoBehaviour
     public void ShowPanel(int index)
     {
         if (currentDisplayedPanel == panels[index]) return;
+
+        clickAudio.Play();
+
         currentDisplayedPanel.GetComponent<Fade>().FadeOut();
         panels[index].gameObject.SetActive(true);
         panels[index].GetComponent<Fade>().FadeIn();
