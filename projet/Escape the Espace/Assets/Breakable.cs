@@ -17,14 +17,12 @@ public class Breakable : MonoBehaviour
     }
 
     public void Break(){
-        audioSource.Play();
         foreach (var item in breakablePieces)
         {
             item.SetActive(true);
             item.transform.parent = null;
         }
-        //gameObject.SetActive(false);
-        GetComponent<MeshRenderer>().enabled = false;
+        gameObject.SetActive(false);
         OnBreakableDestroyed?.Invoke();
     }
 
