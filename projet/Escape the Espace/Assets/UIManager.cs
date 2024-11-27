@@ -29,12 +29,12 @@ public class UIManager : MonoBehaviour
         Instance = this;
     }
 
-    public List<Button> buttons = new List<Button>(); // Not yet used
-    public List<PanelScreen> panels = new List<PanelScreen>();
+    public List<Button> buttons = new(); // Not yet used
+    public List<PanelScreen> panels = new();
 
     void Start()
     {
-        audioSource = this.GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         stepManager = GameObject.Find("Story").GetComponent<playSteps>();
         buttons[0].interactable = false;
         panelConstellation.gameObject.SetActive(false);
@@ -42,11 +42,6 @@ public class UIManager : MonoBehaviour
 
         currentDisplayedPanel = panelChallenge;
         currentSelectedTab = buttons[0];
-    }
-
-    void Update()
-    {
-
     }
 
     public void ShowPanel(int index)
@@ -79,7 +74,6 @@ public class UIManager : MonoBehaviour
         return index;
     }
 
-    // 10x enginner code right there
     public void UpdateChallenge()
     {
         int index = GetLastPlayedStepIndex();
@@ -88,7 +82,7 @@ public class UIManager : MonoBehaviour
         {
             challengePanel.UpdateChallengeText("Defi #1", "Appuyer sur le bouton");
             return;
-        };
+        }
 
         audioSource.Play();
 
@@ -101,8 +95,9 @@ public class UIManager : MonoBehaviour
         {
             ConstellationManager.Instance.AddConstellation("Grande Ourse");
             challengePanel.UpdateChallengeText("Defi #3", "Complêter le moteur");
-        };
-        if (index == 3) 
+        }
+
+        if (index == 3)
         { 
             challengePanel.UpdateChallengerNumber("Defi #4"); 
             challengePanel.ShowEtoilePolaire(); 
@@ -111,7 +106,7 @@ public class UIManager : MonoBehaviour
         {
             ConstellationManager.Instance.AddConstellation("Petite Ourse");
             challengePanel.UpdateChallengeText("Defi #5", "Alimenter le moteur");
-        };
+        }
         if (index == 5) 
         { 
             challengePanel.UpdateChallengerNumber("Defi #6"); 
@@ -135,7 +130,7 @@ public class UIManager : MonoBehaviour
         if (index == 9)
         {
             challengePanel.UpdateChallengeText("Bien joué!", "Le vaisseau est réparé!");
-        };
+        }
     }
 
     public void SkipNextStep()
