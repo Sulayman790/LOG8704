@@ -131,6 +131,10 @@ public class UIManager : MonoBehaviour
         {
             ConstellationManager.Instance.AddConstellation("Cassiopee");
             challengePanel.UpdateChallengeText("Defi #9", "Alimente la machine avec l'energie.");
+        }
+        if (index == 9)
+        {
+            challengePanel.UpdateChallengeText("REUSSITE", "Felicitations! Vous avez reparé votre vaisseau. Le jeu a pris sa fin !");
         };
     }
 
