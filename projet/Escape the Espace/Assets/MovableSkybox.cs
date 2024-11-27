@@ -7,14 +7,14 @@ public class MovableSkybox : MonoBehaviour
     [Range(0,1)]
     [SerializeField] private float rotationSpeed;
 
-    private bool joystickActive = false;
+    private bool joystickActive;
 
-    void Start()
+    private void Start()
     {
         rotationSpeed /= 2;
     }
 
-    void Update()
+    private void FixedUpdate()
     {
         if (!joystickActive)
         {
@@ -30,5 +30,6 @@ public class MovableSkybox : MonoBehaviour
     public void EnableJoystick()
     {
         joystickActive = true;
+        Debug.Log("Enable Joystick");
     }
 }

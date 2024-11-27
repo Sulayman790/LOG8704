@@ -3150,7 +3150,7 @@ PrefabInstance:
       objectReference: {fileID: 7211448773848044386, guid: 44f3430c585c6514985b591c28e05a78, type: 3}
     - target: {fileID: 1492457290810789062, guid: dc40d4936f6d7f44a88297e1d42d288a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1492457290810789062, guid: dc40d4936f6d7f44a88297e1d42d288a, type: 3}
       propertyPath: m_TagString
@@ -3666,7 +3666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ea7bda54b045cec4fb21b5a444ecc3c0, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7898,7 +7898,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &775353334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8049,6 +8049,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!64 &775353338
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775353330}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4487488853162310208, guid: 73b3ec5bafa417b418258d1711419c08, type: 3}
 --- !u!1001 &791287364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9443,7 +9465,7 @@ Transform:
   m_GameObject: {fileID: 1016126587}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.000228, y: -0, z: -0.002854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10808,7 +10830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1155543073}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Attach Transform Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10823,13 +10845,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155543072}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
   m_LocalPosition: {x: 0, y: -0.002, z: 0.003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1675327575}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!1 &1164541439
 GameObject:
   m_ObjectHideFlags: 0
@@ -10913,7 +10935,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164541439}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.28284374, y: -0, z: -0, w: 0.959166}
+  m_LocalRotation: {x: 0.3976736, y: 0.25950783, z: -0.6300755, w: 0.6144236}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3000, y: 3000, z: 3000}
   m_ConstrainProportionsScale: 1
@@ -10923,7 +10945,7 @@ Transform:
   - {fileID: 2042756756}
   - {fileID: 1092714224}
   m_Father: {fileID: 1107984196}
-  m_LocalEulerAnglesHint: {x: 32.86, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 54.657, y: 701.638, z: 619.01}
 --- !u!114 &1164541443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10996,7 +11018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
-    - {fileID: 0}
+    - {fileID: 11400000, guid: b0714eb2f55b55743ab89c985d01d89c, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -11519,6 +11541,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: -6478536213147159724, guid: b06945e054a40ed498e22c0402526568, type: 3}
+    - target: {fileID: 1492457290810789062, guid: dc40d4936f6d7f44a88297e1d42d288a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1492457290810789062, guid: dc40d4936f6d7f44a88297e1d42d288a, type: 3}
       propertyPath: m_TagString
       value: Blue Energy
@@ -20500,6 +20526,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8701423782272895357, guid: c3e8ab75a1f7fc047afcd5e056e57d9e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 775353337}
+    - targetCorrespondingSourceObject: {fileID: 8701423782272895357, guid: c3e8ab75a1f7fc047afcd5e056e57d9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 775353338}
   m_SourcePrefab: {fileID: 100100000, guid: c3e8ab75a1f7fc047afcd5e056e57d9e, type: 3}
 --- !u!4 &1674769160 stripped
 Transform:
@@ -20520,6 +20549,7 @@ GameObject:
   - component: {fileID: 1675327576}
   - component: {fileID: 1675327579}
   - component: {fileID: 1675327580}
+  - component: {fileID: 1675327581}
   m_Layer: 11
   m_Name: Sword
   m_TagString: Sword
@@ -20857,6 +20887,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!64 &1675327581
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675327574}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4686849319519084627, guid: ea7bda54b045cec4fb21b5a444ecc3c0, type: 3}
 --- !u!1001 &1681556445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22460,7 +22512,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2457f0536e68a724c8073124f144e483, type: 2}
     - target: {fileID: 1492457290810789062, guid: dc40d4936f6d7f44a88297e1d42d288a, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1492457290810789062, guid: dc40d4936f6d7f44a88297e1d42d288a, type: 3}
       propertyPath: m_TagString
@@ -23160,7 +23212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4052802640110040681, guid: c3fb9fa880951304eb77858c811979c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.381
+      value: 0.199
       objectReference: {fileID: 0}
     - target: {fileID: 4052802640110040681, guid: c3fb9fa880951304eb77858c811979c1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24643,9 +24695,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4952005941275491950, guid: f987e56f5c36e264e888555e47dec1bc, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952005941275491950, guid: f987e56f5c36e264e888555e47dec1bc, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952005941275491950, guid: f987e56f5c36e264e888555e47dec1bc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 7806100501455280664, guid: ab422e8ea1c2fef4d8c0347d1179c7ed, type: 3}
+      objectReference: {fileID: -870952796764628979, guid: 7da6b8c38d1821b4cb64f41bdbd029e4, type: 3}
+    - target: {fileID: 4952005941275491950, guid: f987e56f5c36e264e888555e47dec1bc, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 71bdd0673f3fe784680a47cd717aff9a, type: 2}
+    - target: {fileID: 4952005941275491950, guid: f987e56f5c36e264e888555e47dec1bc, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 71bdd0673f3fe784680a47cd717aff9a, type: 2}
     - target: {fileID: 5162356030215288089, guid: f987e56f5c36e264e888555e47dec1bc, type: 3}
       propertyPath: m_Name
       value: Joystick
@@ -24988,7 +25056,7 @@ Transform:
   m_GameObject: {fileID: 2042756755}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.002, y: 0, z: 0.003}
+  m_LocalPosition: {x: -0.00002, y: 0.00218, z: 0.00269}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
