@@ -20851,6 +20851,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 552981195659650147, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
+      propertyPath: m_text
+      value: "Contrairement aux autres \xE9toiles, l\u2019\xC9toile Polaire reste
+        pratiquement immobile dans le ciel et pointe le Nord. C\u2019est pourquoi
+        elle est si utile pour les explorateurs."
+      objectReference: {fileID: 0}
     - target: {fileID: 1030750748846192115, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -20886,6 +20892,10 @@ PrefabInstance:
     - target: {fileID: 1510586994823327536, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526597738743354020, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
+      propertyPath: m_text
+      value: "Aucune constellation n'a \xE9t\xE9 trouv\xE9e."
       objectReference: {fileID: 0}
     - target: {fileID: 1617989378151873841, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -21335,6 +21345,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5691728221648792947, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
+      propertyPath: m_text
+      value: "La Grande Ourse est l\u2019une des constellations les plus reconnaissables,
+        utilis\xE9e par les voyageurs pour se rep\xE9rer. En suivant deux de ses
+        \xE9toiles, on peut trouver l\u2019\xE9toile polaire."
+      objectReference: {fileID: 0}
     - target: {fileID: 5741814103258822441, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.8789998
@@ -21374,6 +21390,12 @@ PrefabInstance:
     - target: {fileID: 5741814103258822441, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163732268865496159, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
+      propertyPath: m_text
+      value: "B\xE9telgeuse est une superg\xE9ante rouge. Si elle rempla\xE7ait notre
+        Soleil, elle s\u2019\xE9tendrait jusqu\u2019\xE0 Jupiter. Elle est si massive
+        qu\u2019elle pourrait exploser en supernova dans les prochains mill\xE9naires."
       objectReference: {fileID: 0}
     - target: {fileID: 6289126461929494455, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -21514,6 +21536,12 @@ PrefabInstance:
     - target: {fileID: 6863409744226448823, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094271288452024170, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
+      propertyPath: m_text
+      value: "Cassiop\xE9e, dans la mythologie grecque, \xE9tait une reine vaniteuse.
+        Cette constellation en forme de \"W\" est visible toute l\u2019ann\xE9e dans
+        l\u2019h\xE9misph\xE8re nord. Cela fait un beau parall\xE8le avec son histoire."
       objectReference: {fileID: 0}
     - target: {fileID: 7231892494144132465, guid: 8f1c38536b32443469cc628a5d4498d1, type: 3}
       propertyPath: m_IsActive
