@@ -32,6 +32,9 @@ public class LaserPistol : MonoBehaviour
     private bool isSelected = false;
     private bool isDrawing = false;
 
+    private bool orionFound = false;
+    private bool cassiopeiaFound = false;
+
 
     void Start()
     {
@@ -145,6 +148,10 @@ public class LaserPistol : MonoBehaviour
         Constellation touchedConstellation = hit.transform.parent.GetComponent<Constellation>();
         if (lastStarNumber == -1)
         {
+            // Don't allow redrawing those if they already found (ghetto code)
+            if ((touchedConstellation.name == "Orion" && orionFound) ||
+            (touchedConstellation.name == "Cassiopee" && cassiopeiaFound)) return;
+
             if (currentConstellation != null && currentConstellation != touchedConstellation)
             {
                 ResetConstellationProgress();
@@ -195,10 +202,29 @@ public class LaserPistol : MonoBehaviour
     {
         if (isConstellationCorrect())
         {
-            ConstellationManager.Instance.AddConstellation(currentConstellation.name);
-            CheckConstellation();
-            isDrawing = false;
+            if (CheckConstellation())
+            {
+                LockAllLinksAsSucess();
+                ConstellationManager.Instance.AddConstellation(currentConstellation.name);
+                isDrawing = false;
+            };
         }
+    }
+
+    private void LockAllLinksAsSucess()
+    {
+        foreach (ConstellationLine line in constellationLines)
+        {
+            LineRenderer renderer = line.GetComponent<LineRenderer>();
+            renderer.startColor = Color.yellow;
+            renderer.endColor = Color.yellow;
+
+            if (line.gameObject.transform.childCount == 1) line.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            Destroy(line);
+        }
+
+        currentLinks.Clear();
+        constellationLines.Clear();
     }
 
     private bool isConstellationCorrect()
@@ -222,7 +248,7 @@ public class LaserPistol : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
         {
             pointIndicator.transform.position = hit.point;
-            if (lineRenderer != null) lineRenderer.SetPosition(1, hit.point);
+            if (lineRenderer != null && isDrawing) lineRenderer.SetPosition(1, hit.point);
         }
     }
 
@@ -281,14 +307,22 @@ public class LaserPistol : MonoBehaviour
         Laser.SetActive(false);
     }
 
-    private void CheckConstellation() {
-        CheckConstellationName("Orion", 4, 5);
-        CheckConstellationName("Cassiopee", 6, 7);
+    private bool CheckConstellation() {
+        if (CheckConstellationName("Orion", 4, 5)) return true;
+        if (CheckConstellationName("Cassiopee", 6, 7)) return true;
+        return false;
     }
 
-    private void CheckConstellationName(string constellationName, int currentSteps, int nextSteps)
+    private bool CheckConstellationName(string constellationName, int currentSteps, int nextSteps)
     {
         if (stepsManager.steps[currentSteps].hasPlayed && currentConstellation.name == constellationName)
+        {
+            if (constellationName == "Orion") orionFound = true;
+            if (constellationName == "Cassiopee") cassiopeiaFound = true;
+
             stepsManager.PlayStepIndex(nextSteps);
+            return true;
+        }
+        return false;
     }
 }
