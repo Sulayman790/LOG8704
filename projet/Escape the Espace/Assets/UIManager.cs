@@ -83,12 +83,12 @@ public class UIManager : MonoBehaviour
     public void UpdateChallenge()
     {
         int index = GetLastPlayedStepIndex();
-        PanelChallenge challengePanel = UIManager.Instance.panelChallenge;
+        PanelChallenge challengePanel = Instance.panelChallenge;
         if (index == 0) 
         {
-            challengePanel.UpdateChallengeText("Defi #1", "Pese le boutton rouge !");
+            challengePanel.UpdateChallengeText("Defi #1", "Appuyer sur le bouton");
             return;
-         };
+        };
 
         audioSource.Play();
 
@@ -100,7 +100,7 @@ public class UIManager : MonoBehaviour
         if (index == 2) 
         {
             ConstellationManager.Instance.AddConstellation("Grande Ourse");
-            challengePanel.UpdateChallengeText("Defi #3", "Alimente le moteur avec la casserole .");
+            challengePanel.UpdateChallengeText("Defi #3", "Complêter le moteur");
         };
         if (index == 3) 
         { 
@@ -110,7 +110,7 @@ public class UIManager : MonoBehaviour
         if (index == 4) 
         {
             ConstellationManager.Instance.AddConstellation("Petite Ourse");
-            challengePanel.UpdateChallengeText("Defi #5", "Alimente le moteur avec les cristaux.");
+            challengePanel.UpdateChallengeText("Defi #5", "Alimenter le moteur");
         };
         if (index == 5) 
         { 
@@ -120,7 +120,7 @@ public class UIManager : MonoBehaviour
         if (index == 6) 
         {
             ConstellationManager.Instance.AddConstellation("Orion");
-            challengePanel.UpdateChallengeText("Defi #7", "Brise les asteorides"); 
+            challengePanel.UpdateChallengeText("Defi #7", "Couper les astéroïdes");
         }
         if (index == 7) 
         { 
@@ -130,11 +130,11 @@ public class UIManager : MonoBehaviour
         if (index == 8) 
         {
             ConstellationManager.Instance.AddConstellation("Cassiopee");
-            challengePanel.UpdateChallengeText("Defi #9", "Alimente la machine avec l'energie.");
+            challengePanel.UpdateChallengeText("Defi #9", "Activer le téléporteur");
         }
         if (index == 9)
         {
-            challengePanel.UpdateChallengeText("REUSSITE", "Felicitations! Vous avez repar� votre vaisseau. Le jeu a pris sa fin !");
+            challengePanel.UpdateChallengeText("Bien joué!", "Le vaisseau est réparé!");
         };
     }
 
