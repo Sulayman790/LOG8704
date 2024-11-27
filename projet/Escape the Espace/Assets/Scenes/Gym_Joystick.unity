@@ -26787,9 +26787,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2045258022}
   - component: {fileID: 2045258025}
-  - component: {fileID: 2045258024}
   - component: {fileID: 2045258023}
   - component: {fileID: 2045258026}
+  - component: {fileID: 2045258027}
   m_Layer: 0
   m_Name: StarCrystal_Collector
   m_TagString: Untagged
@@ -26824,34 +26824,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89be49f4f4e9c5b44b8aa5d0a6d05d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2045258024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045258021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faeb176112457ad418e98002843ccedb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: crystal
-  OnEnterEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 645096370}
-        m_TargetAssemblyTypeName: playSteps, Assembly-CSharp
-        m_MethodName: PlayStepIndex
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!136 &2045258025
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26890,7 +26862,46 @@ MonoBehaviour:
   targetTag: crystal
   OnEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2045258027}
+        m_TargetAssemblyTypeName: EnergyTracker, Assembly-CSharp
+        m_MethodName: CountEnergy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2045258027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045258021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad906c14001e5b4eb7cf10b6ce86c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnergyAccumulated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 645096370}
+        m_TargetAssemblyTypeName: playSteps, Assembly-CSharp
+        m_MethodName: PlayStepIndex
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &2054898193 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 464552, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
