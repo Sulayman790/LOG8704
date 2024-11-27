@@ -7,6 +7,8 @@ public class MovableSkybox : MonoBehaviour
     [Range(0,1)]
     [SerializeField] private float rotationSpeed;
 
+    private bool joystickActive = false;
+
     void Start()
     {
         rotationSpeed /= 2;
@@ -14,10 +16,19 @@ public class MovableSkybox : MonoBehaviour
 
     void Update()
     {
+        if (!joystickActive)
+        {
+            return;
+        }
         if (controller.value != Vector2.zero)
         {
             Vector3 rotation = new Vector3(-controller.value.y * rotationSpeed, - controller.value.x * rotationSpeed, 0);
             transform.Rotate(Quaternion.Inverse(Quaternion.Euler(transform.rotation.eulerAngles)) * rotation);
         }
+    }
+
+    public void EnableJoystick()
+    {
+        joystickActive = true;
     }
 }

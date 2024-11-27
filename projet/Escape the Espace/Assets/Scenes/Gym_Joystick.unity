@@ -6719,6 +6719,8 @@ PlayableDirector:
     value: {fileID: 1164541439}
   - key: {fileID: 6135695309447959511, guid: 06f6d1fdaa755ba48bf7a5c4e012f2be, type: 2}
     value: {fileID: 1681556447}
+  - key: {fileID: -2699665507952291591, guid: 06f6d1fdaa755ba48bf7a5c4e012f2be, type: 2}
+    value: {fileID: 1164541446}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &645096369
@@ -10842,6 +10844,7 @@ GameObject:
   - component: {fileID: 1164541443}
   - component: {fileID: 1164541444}
   - component: {fileID: 1164541445}
+  - component: {fileID: 1164541446}
   m_Layer: 3
   m_Name: Movable Skybox
   m_TagString: Untagged
@@ -10979,6 +10982,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1164541446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164541439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 0}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1164541443}
+          m_TargetAssemblyTypeName: MovableSkybox, Assembly-CSharp
+          m_MethodName: EnableJoystick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1168749423
 PrefabInstance:
   m_ObjectHideFlags: 0
