@@ -128,4 +128,9 @@ public class UIManager : MonoBehaviour
             challengePanel.UpdateChallengeText("Defi #9", "Alimente la machine avec l'energie.");
         };
     }
+
+    public void SkipNextStep()
+    {
+        stepManager.PlayStepIndex(GetLastPlayedStepIndex());
+    }
 }
