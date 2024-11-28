@@ -50,11 +50,17 @@ public class UIManager : MonoBehaviour
 
         clickAudio.Play();
 
+        currentDisplayedPanel.GetComponent<CanvasGroup>().interactable = false;
+        currentDisplayedPanel.GetComponent<CanvasGroup>().blocksRaycasts = false;
+
         currentDisplayedPanel.GetComponent<Fade>().FadeOut();
         panels[index].gameObject.SetActive(true);
         panels[index].GetComponent<Fade>().FadeIn();
         panels[index].UpdateScreen();
         currentDisplayedPanel = panels[index];
+
+        currentDisplayedPanel.GetComponent<CanvasGroup>().interactable = true;
+        currentDisplayedPanel.GetComponent<CanvasGroup>().blocksRaycasts = true;
 
         currentSelectedTab.interactable = true;
         currentSelectedTab = buttons[index];

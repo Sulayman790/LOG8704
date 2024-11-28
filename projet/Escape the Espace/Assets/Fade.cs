@@ -25,7 +25,6 @@ public class Fade : MonoBehaviour
 
     IEnumerator FadeInRoutine()
     {
-        this.gameObject.SetActive(true);
         float time = Time.time;
         while (canvasGroup.alpha != 1)
         {
@@ -42,6 +41,5 @@ public class Fade : MonoBehaviour
             canvasGroup.alpha = Mathf.SmoothStep(1, 0, (Time.time - time) / duration);
             yield return null;
         }
-        this.gameObject.SetActive(false);
     }
 }
