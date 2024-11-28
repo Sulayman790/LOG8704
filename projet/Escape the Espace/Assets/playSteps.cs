@@ -27,7 +27,7 @@ public class playSteps : MonoBehaviour
             step.hasPlayed = true;
             
             director.Stop();
-            director.time = step.time;
+            director.time = step.time/60;
             director.Play();
         }
     }

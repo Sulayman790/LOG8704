@@ -1,4 +1,4 @@
-Shader "Custom/ShowInsideWithCubemapURP"
+Shader"Custom/ShowInsideWithCubemapURPEarth"
 {
     Properties
     {
