@@ -125,7 +125,7 @@ public class UIManager : MonoBehaviour
         if (index == 8) 
         {
             ConstellationManager.Instance.AddConstellation("Cassiopee");
-            challengePanel.UpdateChallengeText("Defi #8", "Activer le téléporteur.");
+            challengePanel.UpdateChallengeText("Defi #8", "Activer la machine.");
         }
         if (index == 9)
         {
