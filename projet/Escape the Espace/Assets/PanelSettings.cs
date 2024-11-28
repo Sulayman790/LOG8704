@@ -5,7 +5,7 @@ public class PanelSettings : PanelScreen
     private AudioSource yappingDude;
     void Start()
     {
-        yappingDude = GameObject.Find("Story").GetComponent<AudioSource>();
+        yappingDude = GameObject.Find("StorySpeaker").GetComponent<AudioSource>();
     }
 
     public override void UpdateScreen()
