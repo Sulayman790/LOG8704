@@ -7,6 +7,7 @@ public class MovableSkybox : MonoBehaviour
     [Range(0,1)]
     [SerializeField] private float rotationSpeed;
 
+    [SerializeField]
     private bool joystickActive;
 
     private void Start()
